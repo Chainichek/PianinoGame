@@ -41,5 +41,10 @@ namespace PianinoGame
         {
             Application.Exit();
         }
+
+        private void aboutLabel_Click(object sender, EventArgs e)
+        {
+            new About().ShowDialog();
+        }
     }
 }

@@ -246,5 +246,11 @@ namespace PianinoGame
         {
 
         }
+
+        private void BackPicBox_Click(object sender, EventArgs e)
+        {
+            new GameForm().Close();
+            new Form1().Show();
+        }
     }
 }

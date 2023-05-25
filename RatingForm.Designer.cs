@@ -37,7 +37,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(117, 43);
+            this.label1.Location = new System.Drawing.Point(152, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 37);
             this.label1.TabIndex = 0;
@@ -48,7 +48,7 @@
             this.RatingNamePlace.AutoSize = true;
             this.RatingNamePlace.BackColor = System.Drawing.Color.Transparent;
             this.RatingNamePlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RatingNamePlace.Location = new System.Drawing.Point(65, 115);
+            this.RatingNamePlace.Location = new System.Drawing.Point(83, 132);
             this.RatingNamePlace.Name = "RatingNamePlace";
             this.RatingNamePlace.Size = new System.Drawing.Size(88, 24);
             this.RatingNamePlace.TabIndex = 1;
@@ -61,9 +61,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::PianinoGame.Properties.Resources.png_transparent_light_blue_abstract_gradient_background_blurred;
-            this.ClientSize = new System.Drawing.Size(364, 515);
+            this.ClientSize = new System.Drawing.Size(444, 561);
             this.Controls.Add(this.RatingNamePlace);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RatingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rating";

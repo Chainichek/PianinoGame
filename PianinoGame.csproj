@@ -94,6 +94,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="AskName.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </Compile>
     <Compile Include="Views\IGame.cs" />
     <Compile Include="Views\IRating.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AskName.resx">
       <DependentUpon>AskName.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +185,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\card.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\93634.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\936341.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-96.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />

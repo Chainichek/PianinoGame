@@ -74,12 +74,17 @@ namespace PianinoGame
             
             while (!gameIsFinished)
             {
-                while (gameIsStarted)
+                if (gameIsStarted)
                 {
                     worker.ReportProgress(1);
                     Thread.Sleep(timeSleep);
                 }
 
+            }
+
+            if (gameIsFinished)
+            {
+                int a = 10;
             }
 
         }

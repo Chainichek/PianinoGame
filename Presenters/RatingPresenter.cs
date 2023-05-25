@@ -22,14 +22,9 @@ namespace PianinoGame.Presenters
 
         public void ShowRatingTable()
         {
-           
-            List<RatingDTO> users = rating.getRatingUsers();
-            /*MessageBox.Show(
-               users.ToString(),
-               "Сообщение",
-               MessageBoxButtons.YesNo);*/
-            string text = "";
-            for (int i = 0; i < users.Count; i++)
+            var users = rating.getRatingUsers();
+            var text = "";
+            for (var i = 0; i < users.Count & i < 10; i++)
             {
                 text += (i+1) + ". " + users[i].name  + " - " + users[i].score + "\n";
             }

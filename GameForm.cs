@@ -82,11 +82,6 @@ namespace PianinoGame
 
             }
 
-            if (gameIsFinished)
-            {
-                int a = 10;
-            }
-
         }
 
         public void takeLine(PictureBox picture)

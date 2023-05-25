@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.RatingNamePlace = new System.Windows.Forms.Label();
+            this.btn_BackToMainMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -55,13 +56,23 @@
             this.RatingNamePlace.Text = "1. Место";
             this.RatingNamePlace.Click += new System.EventHandler(this.RatingNamePlace_Click);
             // 
+            // btn_BackToMainMenu
+            // 
+            this.btn_BackToMainMenu.Location = new System.Drawing.Point(174, 509);
+            this.btn_BackToMainMenu.Name = "btn_BackToMainMenu";
+            this.btn_BackToMainMenu.Size = new System.Drawing.Size(75, 23);
+            this.btn_BackToMainMenu.TabIndex = 2;
+            this.btn_BackToMainMenu.Text = "Назад";
+            this.btn_BackToMainMenu.UseVisualStyleBackColor = true;
+            this.btn_BackToMainMenu.Click += new System.EventHandler(this.btn_BackToMainMenu_Click);
+            // 
             // RatingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::PianinoGame.Properties.Resources.png_transparent_light_blue_abstract_gradient_background_blurred;
             this.ClientSize = new System.Drawing.Size(444, 561);
+            this.Controls.Add(this.btn_BackToMainMenu);
             this.Controls.Add(this.RatingNamePlace);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -74,8 +85,9 @@
             this.Load += new System.EventHandler(this.atingForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.Button btn_BackToMainMenu;
 
         #endregion
 

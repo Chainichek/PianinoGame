@@ -25,5 +25,11 @@ namespace PianinoGame
                 "Клавиша D отвечает за нажатие плиток на 3 полосе. (Самая правая)\n\n" +
                 "Нажимать или кликать нужно на самую нижнюю плитку.";
         }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Form1().Show();
+        }
     }
 }

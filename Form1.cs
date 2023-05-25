@@ -14,6 +14,7 @@ namespace PianinoGame
 {
     public partial class Form1 : Form
     {
+        public Form1 MainForm = null;
         public Form1()
         {
             InitializeComponent();
@@ -44,6 +45,7 @@ namespace PianinoGame
 
         private void aboutLabel_Click(object sender, EventArgs e)
         {
+            this.Hide();
             new About().ShowDialog();
         }
     }

@@ -31,6 +31,7 @@ namespace PianinoGame
         {
             this.AboutLabel = new System.Windows.Forms.Label();
             this.aboutTextLabel = new System.Windows.Forms.Label();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AboutLabel
@@ -54,12 +55,23 @@ namespace PianinoGame
             this.aboutTextLabel.TabIndex = 1;
             this.aboutTextLabel.Text = "текст об игре\r\n";
             // 
+            // btn_Back
+            // 
+            this.btn_Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_Back.Location = new System.Drawing.Point(164, 526);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(75, 23);
+            this.btn_Back.TabIndex = 2;
+            this.btn_Back.Text = "Назад";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PianinoGame.Properties.Resources.png_transparent_light_blue_abstract_gradient_background_blurred;
             this.ClientSize = new System.Drawing.Size(444, 561);
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.aboutTextLabel);
             this.Controls.Add(this.AboutLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -69,8 +81,9 @@ namespace PianinoGame
             this.Text = "About";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.Button btn_Back;
 
         #endregion
 

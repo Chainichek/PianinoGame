@@ -18,7 +18,7 @@ namespace PianinoGame
         public RatingForm()
         {
             InitializeComponent();
-            RatingPresenter ratingPresenter = new RatingPresenter(this);
+            var ratingPresenter = new RatingPresenter(this);
             ratingPresenter.ShowRatingTable();
         }
 
@@ -41,11 +41,19 @@ namespace PianinoGame
 
         private void RatingForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            this.Close();
             new Form1().Show();
         }
 
         private void atingForm_Load(object sender, EventArgs e)
         {
-                    }
+            
+        }
+
+        private void btn_BackToMainMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Form1().Show();
+        }
     }
 }

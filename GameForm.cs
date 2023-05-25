@@ -15,6 +15,11 @@ namespace PianinoGame
 {
     public partial class GameForm : Form
     {
+        // TODO доделать, ща акцент на скринах с формами сделаю и всё
+        private static GameForm _gameForm;
+        
+        
+        
         private bool gameIsStarted = true;
         private bool gameIsFinished = false;
 

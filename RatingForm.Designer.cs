@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.RatingNamePlace = new System.Windows.Forms.Label();
             this.btn_BackToMainMenu = new System.Windows.Forms.Button();
+            this.GeneralRatingLabel = new System.Windows.Forms.Label();
+            this.PersonalRatingLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -49,7 +51,7 @@
             this.RatingNamePlace.AutoSize = true;
             this.RatingNamePlace.BackColor = System.Drawing.Color.Transparent;
             this.RatingNamePlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RatingNamePlace.Location = new System.Drawing.Point(83, 132);
+            this.RatingNamePlace.Location = new System.Drawing.Point(97, 177);
             this.RatingNamePlace.Name = "RatingNamePlace";
             this.RatingNamePlace.Size = new System.Drawing.Size(88, 24);
             this.RatingNamePlace.TabIndex = 1;
@@ -66,12 +68,34 @@
             this.btn_BackToMainMenu.UseVisualStyleBackColor = true;
             this.btn_BackToMainMenu.Click += new System.EventHandler(this.btn_BackToMainMenu_Click);
             // 
+            // GeneralRatingLabel
+            // 
+            this.GeneralRatingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GeneralRatingLabel.Location = new System.Drawing.Point(97, 107);
+            this.GeneralRatingLabel.Name = "GeneralRatingLabel";
+            this.GeneralRatingLabel.Size = new System.Drawing.Size(100, 25);
+            this.GeneralRatingLabel.TabIndex = 3;
+            this.GeneralRatingLabel.Text = "Общий";
+            this.GeneralRatingLabel.Click += new System.EventHandler(this.GeneralRatingLabel_Click);
+            // 
+            // PersonalRatingLabel
+            // 
+            this.PersonalRatingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PersonalRatingLabel.Location = new System.Drawing.Point(232, 107);
+            this.PersonalRatingLabel.Name = "PersonalRatingLabel";
+            this.PersonalRatingLabel.Size = new System.Drawing.Size(104, 26);
+            this.PersonalRatingLabel.TabIndex = 4;
+            this.PersonalRatingLabel.Text = "Личный";
+            this.PersonalRatingLabel.Click += new System.EventHandler(this.PersonalRatingLabel_Click);
+            // 
             // RatingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(444, 561);
+            this.Controls.Add(this.PersonalRatingLabel);
+            this.Controls.Add(this.GeneralRatingLabel);
             this.Controls.Add(this.btn_BackToMainMenu);
             this.Controls.Add(this.RatingNamePlace);
             this.Controls.Add(this.label1);
@@ -82,10 +106,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rating";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RatingForm_FormClosed);
-            this.Load += new System.EventHandler(this.atingForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label GeneralRatingLabel;
+        private System.Windows.Forms.Label PersonalRatingLabel;
 
         private System.Windows.Forms.Button btn_BackToMainMenu;
 

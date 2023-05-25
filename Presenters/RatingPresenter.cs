@@ -20,9 +20,20 @@ namespace PianinoGame.Presenters
             rating = new Rating();
         }
 
-        public void ShowRatingTable()
+        public void ShowGeneralRatingTable()
         {
-            var users = rating.getRatingUsers();
+            var users = rating.getGeneralRatingUsers();
+            var text = "";
+            for (var i = 0; i < users.Count & i < 10; i++)
+            {
+                text += (i+1) + ". " + users[i].name  + " - " + users[i].score + "\n";
+            }
+            ratingView.RatingUsers = text;
+        }
+        
+        public void ShowPersonalRatingTable()
+        {
+            var users = rating.getPersonalRatingUsers("Ildar");
             var text = "";
             for (var i = 0; i < users.Count & i < 10; i++)
             {

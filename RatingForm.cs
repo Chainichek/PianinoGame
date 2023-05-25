@@ -15,11 +15,26 @@ namespace PianinoGame
 {
     public partial class RatingForm : Form, IRating
     {
-        public RatingForm()
+        private static RatingForm _ratingForm;
+        
+        private RatingPresenter ratingPresenter;
+        
+        private RatingForm()
         {
             InitializeComponent();
-            var ratingPresenter = new RatingPresenter(this);
-            ratingPresenter.ShowRatingTable();
+            ratingPresenter = new RatingPresenter(this);
+            ratingPresenter.ShowGeneralRatingTable();
+            MakeGeneraleUnderline();
+        }
+
+        public static RatingForm GetInstance()
+        {
+            if (_ratingForm == null)
+            {
+                _ratingForm = new RatingForm();
+            }
+
+            return _ratingForm;
         }
 
         public string RatingUsers
@@ -41,19 +56,53 @@ namespace PianinoGame
 
         private void RatingForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Close();
-            new Form1().Show();
-        }
-
-        private void atingForm_Load(object sender, EventArgs e)
-        {
-            
+            MainForm.GetInstance().Close();
         }
 
         private void btn_BackToMainMenu_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new Form1().Show();
+            Close();
+            MainForm.GetInstance().Show();
         }
+
+        private void MakeGeneraleUnderline()
+        {
+            GeneralRatingLabel.Font = new Font("Microsoft Sans Serif", 
+                16, 
+                FontStyle.Underline, 
+                GraphicsUnit.Point);
+            
+            PersonalRatingLabel.Font = new Font("Microsoft Sans Serif", 
+                16, 
+                FontStyle.Regular, 
+                GraphicsUnit.Point);
+        }
+
+        private void MakePersonalUnderline()
+        {
+            GeneralRatingLabel.Font = new Font("Microsoft Sans Serif", 
+                16, 
+                FontStyle.Regular, 
+                GraphicsUnit.Point);
+            
+            PersonalRatingLabel.Font = new Font("Microsoft Sans Serif", 
+                16, 
+                FontStyle.Underline, 
+                GraphicsUnit.Point);
+        }
+
+        private void GeneralRatingLabel_Click(object sender, EventArgs e)
+        {
+            ratingPresenter.ShowGeneralRatingTable();
+            MakeGeneraleUnderline();
+        }
+
+        private void PersonalRatingLabel_Click(object sender, EventArgs e)
+        {
+            ratingPresenter.ShowPersonalRatingTable();
+            MakePersonalUnderline();
+        }
+
+        
     }
 }

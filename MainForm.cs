@@ -12,25 +12,36 @@ using System.Windows.Forms;
 
 namespace PianinoGame
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1 MainForm = null;
-        public Form1()
+
+        private static MainForm _mainForm;
+        private MainForm()
         {
             InitializeComponent();
+        }
+
+        public static MainForm GetInstance()
+        {
+            if (_mainForm == null)
+            {
+                _mainForm = new MainForm();
+            }
+
+            return _mainForm;
         }
 
 
         private void RatingLabel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new RatingForm().Show();
+            RatingForm.GetInstance().Show();
         }
 
         private void StartGame_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new AskNameForm().ShowDialog();
+            AskNameForm.GetInstance().ShowDialog();
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -46,7 +57,7 @@ namespace PianinoGame
         private void aboutLabel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new About().ShowDialog();
+            About.GetInstance().ShowDialog();
         }
     }
 }

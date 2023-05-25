@@ -202,7 +202,7 @@ namespace PianinoGame
                 Connection connection = Connection.GetInstanse();
                 connection.insertUser(name, score);
                 this.Hide();
-                new Form1().Show();
+                MainForm.GetInstance().Show();
             }
         }
 
@@ -280,8 +280,8 @@ namespace PianinoGame
 
         private void BackPicBox_Click(object sender, EventArgs e)
         {
-            this.Close();
-            new Form1().Show();
+            Close();
+            MainForm.GetInstance().Show();
         }
 
         private void pauseContinueButton_Click(object sender, EventArgs e)
@@ -296,7 +296,7 @@ namespace PianinoGame
 
         private void pauseAboutButton_Click(object sender, EventArgs e)
         {
-            new About().Show();
+            About.GetInstance().Show();
         }
     }
 }

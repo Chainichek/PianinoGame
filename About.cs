@@ -12,7 +12,8 @@ namespace PianinoGame
 {
     public partial class About : Form
     {
-        public About()
+        private static About _aboutForm;
+        private About()
         {
             InitializeComponent();
             aboutTextLabel.Text = "Цель этой игры - не дать упасть за экран плиткам, падающим сверху.\n\n" +
@@ -25,11 +26,21 @@ namespace PianinoGame
                 "Клавиша D отвечает за нажатие плиток на 3 полосе. (Самая правая)\n\n" +
                 "Нажимать или кликать нужно на самую нижнюю плитку.";
         }
+        
+        public static About GetInstance()
+        {
+            if (_aboutForm == null)
+            {
+                _aboutForm = new About();
+            }
+
+            return _aboutForm;
+        }
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new Form1().Show();
+            Close();
+            MainForm.GetInstance().Show();
         }
     }
 }

@@ -19,11 +19,8 @@ namespace PianinoGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-        }
-    /*    static void Main()
-        {
             
-        }*/
+            Application.Run(MainForm.GetInstance());
+        }
     }
 }

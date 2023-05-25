@@ -12,9 +12,14 @@ namespace PianinoGame.Models
         public Connection connection = Connection.GetInstanse();
         public List<String> rating;
 
-        public List<RatingDTO> getRatingUsers()
+        public List<RatingDTO> getGeneralRatingUsers()
         {
             return connection.GetUsers();
+        }
+        
+        public List<RatingDTO> getPersonalRatingUsers(string name)
+        {
+            return connection.GetPersonalUsers(name);
         }
     }
 }

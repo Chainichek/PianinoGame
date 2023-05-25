@@ -46,7 +46,7 @@ namespace PianinoGame.Database
             var cmd = new NpgsqlCommand(sql, con);
             cmd.ExecuteNonQuery();
         }
-
+        // TODO ну типа вынести execute в отедельный метод все дела
         public List<RatingDTO> GetUsers()
         {
             var sql = "WITH A(name, score) AS \r\n(SELECT name, MAX(score) as \"score\" FROM rating GROUP BY name ORDER BY name ASC)\r\n\r\nSELECT name, score FROM A ORDER BY score DESC;";
@@ -63,6 +63,27 @@ namespace PianinoGame.Database
                    (int) reader[1]);
                 users.Add(user);
              }
+            reader.Close();
+            return users;
+        }
+
+        public List<RatingDTO> GetPersonalUsers(string name)
+        {
+            var sql = "SELECT name, score FROM rating WHERE name = @name ORDER BY score DESC;";
+
+            var cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@name", name);
+
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            DataTable schemaTable = reader.GetSchemaTable();
+
+            List<RatingDTO> users = new List<RatingDTO>();
+            while (reader.Read())
+            {
+                RatingDTO user = new RatingDTO((string) reader[0],
+                    (int) reader[1]);
+                users.Add(user);
+            }
             reader.Close();
             return users;
         }

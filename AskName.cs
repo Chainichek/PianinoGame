@@ -12,9 +12,19 @@ namespace PianinoGame
 {
     public partial class AskNameForm : Form
     {
-        public AskNameForm()
+        private static AskNameForm _askNameForm; 
+        private AskNameForm()
         {
             InitializeComponent();
+        }
+        
+        public static AskNameForm GetInstance()
+        {
+            if (_askNameForm == null)
+            {
+                _askNameForm = new AskNameForm();
+            }
+            return _askNameForm;
         }
 
         private void saveNameButton_Click(object sender, EventArgs e)
@@ -22,13 +32,13 @@ namespace PianinoGame
             GameForm gameForm = new GameForm();
             gameForm.name = nameTextBox.Text;
             gameForm.Show();
-            this.Hide();
+            Hide();
         }
 
         private void AskNameForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Close();
-            new Form1().Show();
+            Close();
+            MainForm.GetInstance().Show();
         }
     }
 }

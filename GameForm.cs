@@ -280,13 +280,23 @@ namespace PianinoGame
 
         private void BackPicBox_Click(object sender, EventArgs e)
         {
-            new GameForm().Close();
+            this.Close();
             new Form1().Show();
         }
 
         private void pauseContinueButton_Click(object sender, EventArgs e)
         {
             Pause();
+        }
+
+        private void pauseApplicationExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pauseAboutButton_Click(object sender, EventArgs e)
+        {
+            new About().Show();
         }
     }
 }

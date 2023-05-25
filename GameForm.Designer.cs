@@ -32,11 +32,16 @@
             this.BackPicBox = new System.Windows.Forms.PictureBox();
             this.gamePanel = new System.Windows.Forms.Panel();
             this.pausePanel = new System.Windows.Forms.Panel();
-            this.pauseLabel = new System.Windows.Forms.Label();
+            this.pauseGroupBox = new System.Windows.Forms.GroupBox();
+            this.pauseApplicationExitButton = new System.Windows.Forms.Button();
+            this.pauseGameExitButton = new System.Windows.Forms.Button();
+            this.pauseAboutButton = new System.Windows.Forms.Button();
             this.pauseContinueButton = new System.Windows.Forms.Button();
+            this.pauseLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BackPicBox)).BeginInit();
             this.gamePanel.SuspendLayout();
             this.pausePanel.SuspendLayout();
+            this.pauseGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // ScoreLabel
@@ -53,7 +58,6 @@
             // BackPicBox
             // 
             this.BackPicBox.BackColor = System.Drawing.Color.Transparent;
-            this.BackPicBox.Image = global::PianinoGame.Properties.Resources.icons8_back_96;
             this.BackPicBox.Location = new System.Drawing.Point(12, 12);
             this.BackPicBox.Name = "BackPicBox";
             this.BackPicBox.Size = new System.Drawing.Size(50, 53);
@@ -75,7 +79,7 @@
             // 
             // pausePanel
             // 
-            this.pausePanel.Controls.Add(this.pauseContinueButton);
+            this.pausePanel.Controls.Add(this.pauseGroupBox);
             this.pausePanel.Controls.Add(this.pauseLabel);
             this.pausePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pausePanel.Location = new System.Drawing.Point(0, 0);
@@ -84,30 +88,71 @@
             this.pausePanel.TabIndex = 5;
             this.pausePanel.Visible = false;
             // 
-            // pauseLabel
+            // pauseGroupBox
             // 
-            this.pauseLabel.AutoSize = true;
-            this.pauseLabel.Location = new System.Drawing.Point(133, 19);
-            this.pauseLabel.Name = "pauseLabel";
-            this.pauseLabel.Size = new System.Drawing.Size(57, 13);
-            this.pauseLabel.TabIndex = 0;
-            this.pauseLabel.Text = "Это пауза";
+            this.pauseGroupBox.Controls.Add(this.pauseApplicationExitButton);
+            this.pauseGroupBox.Controls.Add(this.pauseGameExitButton);
+            this.pauseGroupBox.Controls.Add(this.pauseAboutButton);
+            this.pauseGroupBox.Controls.Add(this.pauseContinueButton);
+            this.pauseGroupBox.Location = new System.Drawing.Point(119, 75);
+            this.pauseGroupBox.Name = "pauseGroupBox";
+            this.pauseGroupBox.Size = new System.Drawing.Size(230, 208);
+            this.pauseGroupBox.TabIndex = 3;
+            this.pauseGroupBox.TabStop = false;
+            // 
+            // pauseApplicationExitButton
+            // 
+            this.pauseApplicationExitButton.Location = new System.Drawing.Point(17, 161);
+            this.pauseApplicationExitButton.Name = "pauseApplicationExitButton";
+            this.pauseApplicationExitButton.Size = new System.Drawing.Size(190, 23);
+            this.pauseApplicationExitButton.TabIndex = 4;
+            this.pauseApplicationExitButton.Text = "Выйти в Windows";
+            this.pauseApplicationExitButton.UseVisualStyleBackColor = true;
+            this.pauseApplicationExitButton.Click += new System.EventHandler(this.pauseApplicationExitButton_Click);
+            // 
+            // pauseGameExitButton
+            // 
+            this.pauseGameExitButton.Location = new System.Drawing.Point(17, 111);
+            this.pauseGameExitButton.Name = "pauseGameExitButton";
+            this.pauseGameExitButton.Size = new System.Drawing.Size(190, 23);
+            this.pauseGameExitButton.TabIndex = 3;
+            this.pauseGameExitButton.Text = "Выйти в  главное меню";
+            this.pauseGameExitButton.UseVisualStyleBackColor = true;
+            // 
+            // pauseAboutButton
+            // 
+            this.pauseAboutButton.Location = new System.Drawing.Point(17, 62);
+            this.pauseAboutButton.Name = "pauseAboutButton";
+            this.pauseAboutButton.Size = new System.Drawing.Size(190, 23);
+            this.pauseAboutButton.TabIndex = 2;
+            this.pauseAboutButton.Text = "Об игре";
+            this.pauseAboutButton.UseVisualStyleBackColor = true;
+            this.pauseAboutButton.Click += new System.EventHandler(this.pauseAboutButton_Click);
             // 
             // pauseContinueButton
             // 
-            this.pauseContinueButton.Location = new System.Drawing.Point(136, 91);
+            this.pauseContinueButton.Location = new System.Drawing.Point(17, 15);
             this.pauseContinueButton.Name = "pauseContinueButton";
             this.pauseContinueButton.Size = new System.Drawing.Size(190, 23);
             this.pauseContinueButton.TabIndex = 1;
-            this.pauseContinueButton.Text = "ПРОДОЛЖАЙ ДЕТКА";
+            this.pauseContinueButton.Text = "Продолжить";
             this.pauseContinueButton.UseVisualStyleBackColor = true;
             this.pauseContinueButton.Click += new System.EventHandler(this.pauseContinueButton_Click);
+            // 
+            // pauseLabel
+            // 
+            this.pauseLabel.AutoSize = true;
+            this.pauseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.pauseLabel.Location = new System.Drawing.Point(191, 20);
+            this.pauseLabel.Name = "pauseLabel";
+            this.pauseLabel.Size = new System.Drawing.Size(74, 26);
+            this.pauseLabel.TabIndex = 0;
+            this.pauseLabel.Text = "Пауза";
             // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PianinoGame.Properties.Resources.png_transparent_light_blue_abstract_gradient_background_blurred;
             this.ClientSize = new System.Drawing.Size(444, 561);
             this.Controls.Add(this.pausePanel);
             this.Controls.Add(this.gamePanel);
@@ -124,9 +169,14 @@
             this.gamePanel.PerformLayout();
             this.pausePanel.ResumeLayout(false);
             this.pausePanel.PerformLayout();
+            this.pauseGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
+
+        private System.Windows.Forms.Button pauseAboutButton;
+        private System.Windows.Forms.GroupBox pauseGroupBox;
+        private System.Windows.Forms.Button pauseGameExitButton;
+        private System.Windows.Forms.Button pauseApplicationExitButton;
 
         #endregion
 

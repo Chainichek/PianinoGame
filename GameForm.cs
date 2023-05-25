@@ -16,6 +16,8 @@ namespace PianinoGame
     public partial class GameForm : Form
     {
         private bool gameIsStarted = true;
+        private bool gameIsFinished = false;
+
 
         public string name = "Игрок";
 
@@ -70,10 +72,14 @@ namespace PianinoGame
         public void worker_GameProccess(object sender, DoWorkEventArgs e)
         {
             
-            while (gameIsStarted)
+            while (!gameIsFinished)
             {
-                worker.ReportProgress(1);
-                Thread.Sleep(timeSleep);
+                while (gameIsStarted)
+                {
+                    worker.ReportProgress(1);
+                    Thread.Sleep(timeSleep);
+                }
+
             }
 
         }
@@ -151,7 +157,7 @@ namespace PianinoGame
                 picture.Location = new Point(picture.Location.X, picture.Location.Y + 10);
                 if (picture.Location.Y > this.Height)
                 {
-                    gameIsStarted = false;
+                    gameIsFinished = true;
                 }
                 if (picture.Location.Y > 30 + 180)
                 {
@@ -171,7 +177,7 @@ namespace PianinoGame
                     pictureBox.Location = new Point(cellWidth * randomLine, -180);
                     pictureBox.Image = Properties.Resources.card;
                     pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                    pictureBox.Parent = this;
+                    pictureBox.Parent = gamePanel;
 
                     pictureBox.MouseClick += pictureBox_MouseClick;
 
@@ -220,20 +226,45 @@ namespace PianinoGame
             {
                 case Keys.A:
                     {
-                        picPressed("0");
+                        if (gameIsStarted)
+                            picPressed("0");
                         break;
                     }
                 case Keys.S:
                     {
-                        picPressed("1");
+                        if (gameIsStarted)
+                            picPressed("1");
                         break;
                     }
                 case Keys.D:
                     {
-                        picPressed("2");
+                        if (gameIsStarted)
+                            picPressed("2");
                         break;
                     }
+                case Keys.Escape:
+                {
+                    Pause();
 
+                    break;
+                }
+
+            }
+        }
+
+        private void Pause()
+        {
+            gameIsStarted = !gameIsStarted;
+
+            if (!gameIsStarted)
+            {
+                gamePanel.Visible = false;
+                pausePanel.Visible = true;
+            }
+            else
+            {
+                gamePanel.Visible = true;
+                pausePanel.Visible = false;
             }
         }
 
@@ -251,6 +282,11 @@ namespace PianinoGame
         {
             new GameForm().Close();
             new Form1().Show();
+        }
+
+        private void pauseContinueButton_Click(object sender, EventArgs e)
+        {
+            Pause();
         }
     }
 }

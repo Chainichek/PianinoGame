@@ -30,7 +30,13 @@
         {
             this.ScoreLabel = new System.Windows.Forms.Label();
             this.BackPicBox = new System.Windows.Forms.PictureBox();
+            this.gamePanel = new System.Windows.Forms.Panel();
+            this.pausePanel = new System.Windows.Forms.Panel();
+            this.pauseLabel = new System.Windows.Forms.Label();
+            this.pauseContinueButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BackPicBox)).BeginInit();
+            this.gamePanel.SuspendLayout();
+            this.pausePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // ScoreLabel
@@ -56,14 +62,55 @@
             this.BackPicBox.TabStop = false;
             this.BackPicBox.Click += new System.EventHandler(this.BackPicBox_Click);
             // 
+            // gamePanel
+            // 
+            this.gamePanel.BackColor = System.Drawing.Color.Transparent;
+            this.gamePanel.Controls.Add(this.BackPicBox);
+            this.gamePanel.Controls.Add(this.ScoreLabel);
+            this.gamePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gamePanel.Location = new System.Drawing.Point(0, 0);
+            this.gamePanel.Name = "gamePanel";
+            this.gamePanel.Size = new System.Drawing.Size(444, 561);
+            this.gamePanel.TabIndex = 5;
+            // 
+            // pausePanel
+            // 
+            this.pausePanel.Controls.Add(this.pauseContinueButton);
+            this.pausePanel.Controls.Add(this.pauseLabel);
+            this.pausePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pausePanel.Location = new System.Drawing.Point(0, 0);
+            this.pausePanel.Name = "pausePanel";
+            this.pausePanel.Size = new System.Drawing.Size(444, 561);
+            this.pausePanel.TabIndex = 5;
+            this.pausePanel.Visible = false;
+            // 
+            // pauseLabel
+            // 
+            this.pauseLabel.AutoSize = true;
+            this.pauseLabel.Location = new System.Drawing.Point(133, 19);
+            this.pauseLabel.Name = "pauseLabel";
+            this.pauseLabel.Size = new System.Drawing.Size(57, 13);
+            this.pauseLabel.TabIndex = 0;
+            this.pauseLabel.Text = "Это пауза";
+            // 
+            // pauseContinueButton
+            // 
+            this.pauseContinueButton.Location = new System.Drawing.Point(136, 91);
+            this.pauseContinueButton.Name = "pauseContinueButton";
+            this.pauseContinueButton.Size = new System.Drawing.Size(190, 23);
+            this.pauseContinueButton.TabIndex = 1;
+            this.pauseContinueButton.Text = "ПРОДОЛЖАЙ ДЕТКА";
+            this.pauseContinueButton.UseVisualStyleBackColor = true;
+            this.pauseContinueButton.Click += new System.EventHandler(this.pauseContinueButton_Click);
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PianinoGame.Properties.Resources.png_transparent_light_blue_abstract_gradient_background_blurred;
             this.ClientSize = new System.Drawing.Size(444, 561);
-            this.Controls.Add(this.BackPicBox);
-            this.Controls.Add(this.ScoreLabel);
+            this.Controls.Add(this.pausePanel);
+            this.Controls.Add(this.gamePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -73,13 +120,21 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameForm_FormClosed);
             this.Load += new System.EventHandler(this.GameForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BackPicBox)).EndInit();
+            this.gamePanel.ResumeLayout(false);
+            this.gamePanel.PerformLayout();
+            this.pausePanel.ResumeLayout(false);
+            this.pausePanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.Label ScoreLabel;
         private System.Windows.Forms.PictureBox BackPicBox;
+        private System.Windows.Forms.Panel gamePanel;
+        private System.Windows.Forms.Panel pausePanel;
+        private System.Windows.Forms.Label pauseLabel;
+        private System.Windows.Forms.Button pauseContinueButton;
     }
 }

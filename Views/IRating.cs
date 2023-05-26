@@ -9,6 +9,6 @@ namespace PianinoGame.Views
 {
     public interface IRating
     {
-        string RatingUsers { set; get; }
+        string RatingUsers { get; set; }
     }
 }

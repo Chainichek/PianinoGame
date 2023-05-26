@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PianinoGame.Models;
 using Timer = System.Threading.Timer;
 
 namespace PianinoGame
@@ -39,7 +40,7 @@ namespace PianinoGame
         private int timeSleep = 50;
 
 
-        public GameForm()
+        private GameForm()
         {
             InitializeComponent();
 
@@ -54,6 +55,16 @@ namespace PianinoGame
             worker.RunWorkerAsync(10000);
 
             this.KeyUp += new KeyEventHandler(Form1_KeyUp);
+        }
+
+
+        public static GameForm GetInstance()
+        {
+            if (_gameForm == null)
+            {
+                _gameForm = new GameForm();
+            }
+            return _gameForm;
         }
 
         public void upHard()

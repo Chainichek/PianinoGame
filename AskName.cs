@@ -29,7 +29,7 @@ namespace PianinoGame
 
         private void saveNameButton_Click(object sender, EventArgs e)
         {
-            GameForm gameForm = new GameForm();
+            GameForm gameForm = GameForm.GetInstance();
             gameForm.name = nameTextBox.Text;
             gameForm.Show();
             Hide();

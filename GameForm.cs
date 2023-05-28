@@ -160,13 +160,14 @@ namespace PianinoGame
 
         private void picPressed(string key)
         {
-            if (PictureBoxes.Count == 0 || !(PictureBoxes[0].Name.Equals(key) && targetBoxes.Contains(PictureBoxes[0])))
+            PictureBox pictureBox = targetBoxes.Find(x => x.Name.Equals(key));
+            if (targetBoxes.Count == 0 || pictureBox == null)
             {
                 gameIsFinished = true;
                 return;
             }
 
-            closePic(PictureBoxes[0]);
+            closePic(pictureBox);
             
         }
 
@@ -225,7 +226,7 @@ namespace PianinoGame
 
             
         }
-        void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        async void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             DialogResult result = MessageBox.Show(
                 "Игра завершена.\n" +
@@ -238,8 +239,9 @@ namespace PianinoGame
             if (result == DialogResult.OK)
             {
                 Connection connection = Connection.GetInstanse();
-                connection.insertUser(name, score);
-                this.Hide();
+                await Task.Run(() => connection.insertUser(name, score));
+                this.Dispose();
+                _gameForm = null;
                 MainForm.GetInstance().Show();
             }
         }

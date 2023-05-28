@@ -18,12 +18,15 @@ namespace PianinoGame
     {
         // TODO доделать, ща акцент на скринах с формами сделаю и всё
         private static GameForm _gameForm;
-        
-        
-        
+
+        //Координата цели
+        private int targetY;
+
         private bool gameIsStarted = true;
         private bool gameIsFinished = false;
 
+        //Панели, попавшие в цель
+        private List<PictureBox> targetBoxes;
 
         public string name = "Игрок";
 
@@ -46,6 +49,7 @@ namespace PianinoGame
 
             cellWidth = this.Width / 3;
 
+            targetY = gamePictureBoxTargerPanel.Location.Y + (gamePictureBoxTargerPanel.Height >> 1);
 
             worker = new BackgroundWorker();
             worker.WorkerReportsProgress = true;
@@ -156,17 +160,26 @@ namespace PianinoGame
 
         private void picPressed(string key)
         {
-            if (PictureBoxes.Count != 0)
+            if (PictureBoxes.Count == 0 || !(PictureBoxes[0].Name.Equals(key) && targetBoxes.Contains(PictureBoxes[0])))
             {
-                if (PictureBoxes[0].Name.Equals(key))
-                {
-                    closePic(PictureBoxes[0]);
-                }
+                gameIsFinished = true;
+                return;
             }
+
+            closePic(PictureBoxes[0]);
+            
         }
-       
+
+        private bool IsTarget(PictureBox picture) => (picture.Location.Y + picture.Height > gamePictureBoxTargerPanel.Location.Y &&
+                                                      picture.Location.Y + picture.Height <
+                                                      gamePictureBoxTargerPanel.Location.Y +
+                                                      gamePictureBoxTargerPanel.Height);
+
         public void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
+            //Удаление пропавших ссылок
+            PictureBoxes.RemoveAll(item => item == null);
+
             for (int i = PictureBoxes.Count-1; i >= 0; i--)
             {
                 PictureBox picture = PictureBoxes[i];
@@ -180,7 +193,14 @@ namespace PianinoGame
                     freeLine(picture);
                 }
             }
-            
+
+            //Если попадает в границы невидимого таргет-бокса
+            targetBoxes = PictureBoxes.Where(IsTarget).ToList();
+            //foreach (var picture in targetBoxes)
+            //{
+            //    Console.WriteLine(picture);
+            //}
+
             if (PictureBoxes.Count < 3)
             {
                 int randomLine = new Random().Next(0, 3);
@@ -202,6 +222,8 @@ namespace PianinoGame
                     PictureBoxes.Add(pictureBox);
                 }
             }
+
+            
         }
         void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
@@ -313,6 +335,22 @@ namespace PianinoGame
         private void pauseAboutButton_Click(object sender, EventArgs e)
         {
             About.GetInstance().Show();
+        }
+
+        private void gamePanel_Paint(object sender, PaintEventArgs e)
+        {
+            Panel panel = sender as Panel;
+            Graphics g = e.Graphics;
+            
+
+            using (var brush = new SolidBrush(Color.FromArgb(112, Color.Red)))
+            {
+                if (panel != null)
+                {
+                    Rectangle rect = new Rectangle(new Point(panel.Location.X, gamePictureBoxTargerPanel.Location.Y), new Size(panel.Width, gamePictureBoxTargerPanel.Height));
+                    g.FillRectangle(brush, rect);
+                }
+            }
         }
     }
 }

@@ -28,59 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.StartGame = new System.Windows.Forms.Label();
-            this.RatingLabel = new System.Windows.Forms.Label();
-            this.ExitLabel = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.startGameLabel = new System.Windows.Forms.Label();
+            this.ratingLabel = new System.Windows.Forms.Label();
+            this.exitLabel = new System.Windows.Forms.Label();
             this.aboutLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // titleLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(151, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Пианино";
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLabel.Location = new System.Drawing.Point(151, 49);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(137, 37);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = "Пианино";
             // 
-            // StartGame
+            // startGameLabel
             // 
-            this.StartGame.AutoSize = true;
-            this.StartGame.BackColor = System.Drawing.Color.Transparent;
-            this.StartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StartGame.Location = new System.Drawing.Point(164, 144);
-            this.StartGame.Name = "StartGame";
-            this.StartGame.Size = new System.Drawing.Size(82, 26);
-            this.StartGame.TabIndex = 1;
-            this.StartGame.Text = "Играть";
-            this.StartGame.Click += new System.EventHandler(this.StartGame_Click);
+            this.startGameLabel.AutoSize = true;
+            this.startGameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.startGameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.startGameLabel.Location = new System.Drawing.Point(164, 144);
+            this.startGameLabel.Name = "startGameLabel";
+            this.startGameLabel.Size = new System.Drawing.Size(82, 26);
+            this.startGameLabel.TabIndex = 1;
+            this.startGameLabel.Text = "Играть";
+            this.startGameLabel.Click += new System.EventHandler(this.StartGame_Click);
             // 
-            // RatingLabel
+            // ratingLabel
             // 
-            this.RatingLabel.AutoSize = true;
-            this.RatingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.RatingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RatingLabel.Location = new System.Drawing.Point(164, 236);
-            this.RatingLabel.Name = "RatingLabel";
-            this.RatingLabel.Size = new System.Drawing.Size(93, 26);
-            this.RatingLabel.TabIndex = 2;
-            this.RatingLabel.Text = "Рейтинг";
-            this.RatingLabel.Click += new System.EventHandler(this.RatingLabel_Click);
+            this.ratingLabel.AutoSize = true;
+            this.ratingLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ratingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ratingLabel.Location = new System.Drawing.Point(164, 236);
+            this.ratingLabel.Name = "ratingLabel";
+            this.ratingLabel.Size = new System.Drawing.Size(93, 26);
+            this.ratingLabel.TabIndex = 2;
+            this.ratingLabel.Text = "Рейтинг";
+            this.ratingLabel.Click += new System.EventHandler(this.RatingLabel_Click);
             // 
-            // ExitLabel
+            // exitLabel
             // 
-            this.ExitLabel.AutoSize = true;
-            this.ExitLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ExitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ExitLabel.Location = new System.Drawing.Point(164, 277);
-            this.ExitLabel.Name = "ExitLabel";
-            this.ExitLabel.Size = new System.Drawing.Size(79, 26);
-            this.ExitLabel.TabIndex = 3;
-            this.ExitLabel.Text = "Выход";
-            this.ExitLabel.Click += new System.EventHandler(this.ExitLabel_Click);
+            this.exitLabel.AutoSize = true;
+            this.exitLabel.BackColor = System.Drawing.Color.Transparent;
+            this.exitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exitLabel.Location = new System.Drawing.Point(164, 277);
+            this.exitLabel.Name = "exitLabel";
+            this.exitLabel.Size = new System.Drawing.Size(79, 26);
+            this.exitLabel.TabIndex = 3;
+            this.exitLabel.Text = "Выход";
+            this.exitLabel.Click += new System.EventHandler(this.ExitLabel_Click);
             // 
             // aboutLabel
             // 
@@ -89,22 +89,22 @@
             this.aboutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.aboutLabel.Location = new System.Drawing.Point(164, 191);
             this.aboutLabel.Name = "aboutLabel";
-            this.aboutLabel.Size = new System.Drawing.Size(134, 26);
+            this.aboutLabel.Size = new System.Drawing.Size(92, 26);
             this.aboutLabel.TabIndex = 4;
-            this.aboutLabel.Text = "Как играть?";
+            this.aboutLabel.Text = "Об игре";
             this.aboutLabel.Click += new System.EventHandler(this.aboutLabel_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PianinoGame.Properties.Resources.png_transparent_light_blue_abstract_gradient_background_blurred;
             this.ClientSize = new System.Drawing.Size(444, 561);
             this.Controls.Add(this.aboutLabel);
-            this.Controls.Add(this.ExitLabel);
-            this.Controls.Add(this.RatingLabel);
-            this.Controls.Add(this.StartGame);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.exitLabel);
+            this.Controls.Add(this.ratingLabel);
+            this.Controls.Add(this.startGameLabel);
+            this.Controls.Add(this.titleLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -119,10 +119,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label StartGame;
-        private System.Windows.Forms.Label RatingLabel;
-        private System.Windows.Forms.Label ExitLabel;
+        private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.Label startGameLabel;
+        private System.Windows.Forms.Label ratingLabel;
+        private System.Windows.Forms.Label exitLabel;
         private System.Windows.Forms.Label aboutLabel;
     }
 }

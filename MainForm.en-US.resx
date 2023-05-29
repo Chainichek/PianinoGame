@@ -117,45 +117,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="936341" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\936341.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="titleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 37</value>
   </data>
-  <data name="istockphoto-1185747322-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\istockphoto-1185747322-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="titleLabel.Text" xml:space="preserve">
+    <value>Piano</value>
   </data>
-  <data name="back4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="startGameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 26</value>
   </data>
-  <data name="png-transparent-light-blue-abstract-gradient-background-blurred" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-light-blue-abstract-gradient-background-blurred.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="startGameLabel.Text" xml:space="preserve">
+    <value>Play</value>
   </data>
-  <data name="icons8-back-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-back-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ratingLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 26</value>
   </data>
-  <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ratingLabel.Text" xml:space="preserve">
+    <value>Rating</value>
   </data>
-  <data name="card" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\card.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exitLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 26</value>
   </data>
-  <data name="blue-wide-background-with-linear-blurred-gradient-free-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blue-wide-background-with-linear-blurred-gradient-free-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exitLabel.Text" xml:space="preserve">
+    <value>Exit</value>
   </data>
-  <data name="93634" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\93634.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="aboutLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 26</value>
   </data>
-  <data name="back1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="aboutLabel.Text" xml:space="preserve">
+    <value>About</value>
   </data>
-  <data name="back2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settingsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 26</value>
   </data>
-  <data name="icons8-back-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-back-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settingsLabel.Text" xml:space="preserve">
+    <value>Settings</value>
   </data>
-  <data name="Cultures" xml:space="preserve">
-    <value>ru-RU,en-US</value>
-    <comment>Все языки, поддерживаемые приложением, написанные через разделитель-запятую</comment>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Piano</value>
   </data>
 </root>

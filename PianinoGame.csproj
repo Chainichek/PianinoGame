@@ -106,6 +106,7 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationBootStrap.cs" />
     <Compile Include="AskName.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +154,9 @@
     <EmbeddedResource Include="AskName.resx">
       <DependentUpon>AskName.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.en-US.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +175,9 @@
     </Compile>
     <EmbeddedResource Include="RatingForm.resx">
       <DependentUpon>RatingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.en-US.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>

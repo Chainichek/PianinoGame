@@ -59,5 +59,11 @@ namespace PianinoGame
             this.Hide();
             About.GetInstance().ShowDialog();
         }
+
+        private void settingsLabel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Settings.GetInstance().ShowDialog();
+        }
     }
 }

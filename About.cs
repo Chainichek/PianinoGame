@@ -12,6 +12,8 @@ namespace PianinoGame
 {
     public partial class About : Form
     {
+        private Form _backForm;
+
         private static About _aboutForm;
         private About()
         {
@@ -28,10 +30,15 @@ namespace PianinoGame
             return _aboutForm;
         }
 
+        public void SetBackForm(Form form)
+        {
+            _backForm = form;
+        }
+        
         private void btn_Back_Click(object sender, EventArgs e)
         {
             Close();
-            MainForm.GetInstance().Show();
+            _backForm.Show();
         }
     }
 }

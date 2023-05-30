@@ -157,6 +157,7 @@ namespace PianinoGame
             resources.ApplyResources(this.backButton, "backButton");
             this.backButton.Name = "backButton";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // Settings
             // 

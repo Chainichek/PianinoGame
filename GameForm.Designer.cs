@@ -34,6 +34,7 @@
             this.gamePictureBoxTargerPanel = new System.Windows.Forms.Panel();
             this.pausePanel = new System.Windows.Forms.Panel();
             this.pauseGroupBox = new System.Windows.Forms.GroupBox();
+            this.pauseSettingsButton = new System.Windows.Forms.Button();
             this.pauseApplicationExitButton = new System.Windows.Forms.Button();
             this.pauseGameExitButton = new System.Windows.Forms.Button();
             this.pauseAboutButton = new System.Windows.Forms.Button();
@@ -105,19 +106,30 @@
             // 
             // pauseGroupBox
             // 
+            this.pauseGroupBox.Controls.Add(this.pauseSettingsButton);
             this.pauseGroupBox.Controls.Add(this.pauseApplicationExitButton);
             this.pauseGroupBox.Controls.Add(this.pauseGameExitButton);
             this.pauseGroupBox.Controls.Add(this.pauseAboutButton);
             this.pauseGroupBox.Controls.Add(this.pauseContinueButton);
             this.pauseGroupBox.Location = new System.Drawing.Point(119, 75);
             this.pauseGroupBox.Name = "pauseGroupBox";
-            this.pauseGroupBox.Size = new System.Drawing.Size(230, 208);
+            this.pauseGroupBox.Size = new System.Drawing.Size(230, 249);
             this.pauseGroupBox.TabIndex = 3;
             this.pauseGroupBox.TabStop = false;
             // 
+            // pauseSettingsButton
+            // 
+            this.pauseSettingsButton.Location = new System.Drawing.Point(20, 113);
+            this.pauseSettingsButton.Name = "pauseSettingsButton";
+            this.pauseSettingsButton.Size = new System.Drawing.Size(190, 23);
+            this.pauseSettingsButton.TabIndex = 5;
+            this.pauseSettingsButton.Text = "Настройки";
+            this.pauseSettingsButton.UseVisualStyleBackColor = true;
+            this.pauseSettingsButton.Click += new System.EventHandler(this.pauseSettingsButton_Click);
+            // 
             // pauseApplicationExitButton
             // 
-            this.pauseApplicationExitButton.Location = new System.Drawing.Point(17, 161);
+            this.pauseApplicationExitButton.Location = new System.Drawing.Point(17, 210);
             this.pauseApplicationExitButton.Name = "pauseApplicationExitButton";
             this.pauseApplicationExitButton.Size = new System.Drawing.Size(190, 23);
             this.pauseApplicationExitButton.TabIndex = 4;
@@ -127,7 +139,7 @@
             // 
             // pauseGameExitButton
             // 
-            this.pauseGameExitButton.Location = new System.Drawing.Point(17, 111);
+            this.pauseGameExitButton.Location = new System.Drawing.Point(17, 163);
             this.pauseGameExitButton.Name = "pauseGameExitButton";
             this.pauseGameExitButton.Size = new System.Drawing.Size(190, 23);
             this.pauseGameExitButton.TabIndex = 3;
@@ -172,6 +184,7 @@
             this.Controls.Add(this.gamePanel);
             this.Controls.Add(this.pausePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GameForm";
@@ -203,5 +216,6 @@
         private System.Windows.Forms.Label pauseLabel;
         private System.Windows.Forms.Button pauseContinueButton;
         private System.Windows.Forms.Panel gamePictureBoxTargerPanel;
+        private System.Windows.Forms.Button pauseSettingsButton;
     }
 }

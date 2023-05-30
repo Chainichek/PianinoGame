@@ -31,7 +31,6 @@ namespace PianinoGame
             return _mainForm;
         }
 
-
         private void RatingLabel_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -64,12 +63,14 @@ namespace PianinoGame
 
         private void aboutLabel_Click(object sender, EventArgs e)
         {
+            About.GetInstance().SetBackForm(this);
             this.Hide();
             About.GetInstance().ShowDialog();
         }
 
         private void settingsLabel_Click(object sender, EventArgs e)
         {
+            Settings.GetInstance().SetBackForm(this);
             this.Hide();
             Settings.GetInstance().ShowDialog();
         }

@@ -37,7 +37,7 @@ namespace PianinoGame
         
         private void btn_Back_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
             _backForm.Show();
         }
     }

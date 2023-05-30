@@ -6,6 +6,7 @@ namespace PianinoGame
 {
     public partial class Settings : Form
     {
+        private Form _backForm;
         private static Settings _settings;
 
         private Settings()
@@ -18,6 +19,11 @@ namespace PianinoGame
             }
             SetUserSettings();
 
+        }
+
+        public void SetBackForm(Form form)
+        {
+            _backForm = form;
         }
 
         private void SetUserSettings()
@@ -51,6 +57,12 @@ namespace PianinoGame
         private void Settings_FormClosed(object sender, FormClosedEventArgs e)
         {
             MainForm.GetInstance().Close();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            _backForm.Show();
         }
     }
 }

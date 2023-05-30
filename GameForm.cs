@@ -51,6 +51,10 @@ namespace PianinoGame
             this.KeyUp += new KeyEventHandler(Form1_KeyUp);
         }
 
+        public new void Show()
+        {
+            base.Show();
+        }
 
         private void SetWorker()
         {
@@ -149,7 +153,7 @@ namespace PianinoGame
         private void closePic(PictureBox picture)
         {
             updateScoreLabel();
-            picture.Hide();
+            gamePanel.Controls.Remove(picture);
             PictureBoxes.Remove(picture);
             freeLine(picture);
         }
@@ -252,7 +256,7 @@ namespace PianinoGame
                 Visible = false;
                 MainForm.GetInstance().Show();
 
-                worker.Dispose();
+                Reset();
                 await task;
             }
         }
@@ -305,11 +309,15 @@ namespace PianinoGame
 
         private void Reset()
         {
-            PictureBoxes.ForEach(closePic);
+            foreach (var t in PictureBoxes)
+            {
+                gamePanel.Controls.Remove(t);
+                freeLine(t);
+            }
             targetBoxes.Clear();
             PictureBoxes.Clear();
 
-
+            worker.Dispose();
         }
 
         private void Pause()
@@ -342,6 +350,8 @@ namespace PianinoGame
         {
             Visible = false;
             MainForm.GetInstance().Show();
+
+            Reset();
         }
 
         private void pauseContinueButton_Click(object sender, EventArgs e)
@@ -356,6 +366,8 @@ namespace PianinoGame
 
         private void pauseAboutButton_Click(object sender, EventArgs e)
         {
+            About.GetInstance().SetBackForm(this);
+            Hide();
             About.GetInstance().Show();
         }
 
@@ -373,6 +385,13 @@ namespace PianinoGame
                     g.FillRectangle(brush, rect);
                 }
             }
+        }
+
+        private void pauseSettingsButton_Click(object sender, EventArgs e)
+        {
+            Settings.GetInstance().SetBackForm(this);
+            this.Hide();
+            Settings.GetInstance().ShowDialog();
         }
     }
 }

@@ -33,7 +33,7 @@ namespace PianinoGame.Presenters
         
         public void ShowPersonalRatingTable()
         {
-            var users = rating.getPersonalRatingUsers("Ildar");
+            var users = rating.getPersonalRatingUsers(Properties.Settings.Default.Username);
             var text = "";
             for (var i = 0; i < users.Count & i < 10; i++)
             {

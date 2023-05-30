@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AskNameForm));
             this.label1 = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.saveNameButton = new System.Windows.Forms.Button();
@@ -35,38 +36,26 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(37, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Введите имя: ";
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(41, 36);
+            resources.ApplyResources(this.nameTextBox, "nameTextBox");
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nameTextBox.TabIndex = 1;
             // 
             // saveNameButton
             // 
-            this.saveNameButton.Location = new System.Drawing.Point(41, 62);
+            resources.ApplyResources(this.saveNameButton, "saveNameButton");
             this.saveNameButton.Name = "saveNameButton";
-            this.saveNameButton.Size = new System.Drawing.Size(75, 23);
-            this.saveNameButton.TabIndex = 2;
-            this.saveNameButton.Text = "Сохранить";
             this.saveNameButton.UseVisualStyleBackColor = true;
             this.saveNameButton.Click += new System.EventHandler(this.saveNameButton_Click);
             // 
             // AskNameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PianinoGame.Properties.Resources.png_transparent_light_blue_abstract_gradient_background_blurred;
-            this.ClientSize = new System.Drawing.Size(221, 164);
             this.Controls.Add(this.saveNameButton);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label1);
@@ -74,12 +63,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AskNameForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Введите имя";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AskNameForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

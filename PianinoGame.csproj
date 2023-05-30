@@ -154,6 +154,9 @@
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AskName.en-US.resx">
+      <DependentUpon>AskName.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AskName.resx">
       <DependentUpon>AskName.cs</DependentUpon>
     </EmbeddedResource>

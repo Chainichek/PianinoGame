@@ -17,5 +17,17 @@
     <Setting Name="Username" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="DbHost" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">db.bit.io</Value>
+    </Setting>
+    <Setting Name="DbPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">v2_43UpL_gjutm8AuznMTivwETmqiYWt</Value>
+    </Setting>
+    <Setting Name="DbLogin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">appAccount</Value>
+    </Setting>
+    <Setting Name="DbName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Wilidon/pianino</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -82,5 +82,47 @@ namespace PianinoGame.Properties {
                 this["Username"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("db.bit.io")]
+        public string DbHost {
+            get {
+                return ((string)(this["DbHost"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("v2_43UpL_gjutm8AuznMTivwETmqiYWt")]
+        public string DbPassword {
+            get {
+                return ((string)(this["DbPassword"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("appAccount")]
+        public string DbLogin {
+            get {
+                return ((string)(this["DbLogin"]));
+            }
+            set {
+                this["DbLogin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Wilidon/pianino")]
+        public string DbName {
+            get {
+                return ((string)(this["DbName"]));
+            }
+            set {
+                this["DbName"] = value;
+            }
+        }
     }
 }

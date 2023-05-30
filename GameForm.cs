@@ -197,10 +197,7 @@ namespace PianinoGame
 
             //Если попадает в границы невидимого таргет-бокса
             targetBoxes = PictureBoxes.Where(IsTarget).ToList();
-            //foreach (var picture in targetBoxes)
-            //{
-            //    Console.WriteLine(picture);
-            //}
+
 
             if (PictureBoxes.Count < 3)
             {
@@ -238,11 +235,14 @@ namespace PianinoGame
                 MessageBoxOptions.DefaultDesktopOnly);
             if (result == DialogResult.OK)
             {
-                Connection connection = Connection.GetInstanse();
-                await Task.Run(() => connection.insertUser(name, score));
+                var connection = new Connection();
+                var task = Task.Run(() => connection.InsertUserAsync(name, score));
+
                 this.Dispose();
                 _gameForm = null;
                 MainForm.GetInstance().Show();
+
+                await task;
             }
         }
 

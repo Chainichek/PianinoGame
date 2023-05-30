@@ -9,7 +9,7 @@ namespace PianinoGame.Models
 {
     public class Rating
     {
-        public Connection connection = Connection.GetInstanse();
+        public Connection connection = new Connection();
         public List<String> rating;
 
         public List<RatingDTO> getGeneralRatingUsers()

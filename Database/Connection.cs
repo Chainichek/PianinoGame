@@ -1,91 +1,104 @@
 ﻿using Npgsql;
 using PianinoGame.Models;
-using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PianinoGame.Database
 {
     public class Connection
     {
-        private NpgsqlConnection con;
-        private static Connection mConnection;
+        private static readonly string ConnectionString = $"Host={Properties.Settings.Default.DbHost};" +
+                                                          $"Username={Properties.Settings.Default.DbLogin};" +
+                                                          $"Password={Properties.Settings.Default.DbPassword};" +
+                                                          $"Database={Properties.Settings.Default.DbName}";
+
         public Connection()
         {
-            var bitHost = "db.bit.io";
-            var bitApiKey = "v2_43UpL_gjutm8AuznMTivwETmqiYWt"; // from the "Password" field of the "Connect" menu
-
-            var bitUser = "appAccount";
-            var bitDbName = "Wilidon/pianino";
-
-            var cs = $"Host={bitHost};Username={bitUser};Password={bitApiKey};Database={bitDbName}";
-
-            con = new NpgsqlConnection(cs);
-            con.Open();
-
-
         }
 
-        public static Connection GetInstanse()
+        public void InsertUser(string name, int score)
         {
-            if (mConnection == null)
+            using (var connection = new NpgsqlConnection(ConnectionString))
             {
-                mConnection = new Connection();
-            }
-            return mConnection;
-        }
-        
-        public void insertUser(string name, int score)
-        {
-            var sql = "INSERT INTO rating (name, score) VALUES('" + name + "', '" + score + "');";
+                connection.Open();
+                var cmd = connection.CreateCommand();
+                cmd.CommandText = "INSERT INTO rating (name, score) VALUES(@name, @score)";
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@score", score);
 
-            var cmd = new NpgsqlCommand(sql, con);
-            cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public async void InsertUserAsync(string name, int score)
+        {
+            using (var connection = new NpgsqlConnection(ConnectionString))
+            {
+                connection.Open();
+                var cmd = connection.CreateCommand();
+                cmd.CommandText = $"INSERT INTO rating (name, score) VALUES(@name, @score)";
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@score", score);
+
+                await cmd.ExecuteNonQueryAsync();
+            }
         }
         // TODO ну типа вынести execute в отедельный метод все дела
         public List<RatingDTO> GetUsers()
         {
-            var sql = "WITH A(name, score) AS \r\n(SELECT name, MAX(score) as \"score\" FROM rating GROUP BY name ORDER BY name ASC)\r\n\r\nSELECT name, score FROM A ORDER BY score DESC;";
-
-            var cmd = new NpgsqlCommand(sql, con);
-
-            NpgsqlDataReader reader = cmd.ExecuteReader();
-            DataTable schemaTable = reader.GetSchemaTable();
-
-            List<RatingDTO> users = new List<RatingDTO>();
-            while (reader.Read())
+            using (var connection = new NpgsqlConnection(ConnectionString))
             {
-                RatingDTO user = new RatingDTO((string) reader[0],
-                   (int) reader[1]);
-                users.Add(user);
-             }
-            reader.Close();
-            return users;
+                connection.Open();
+                var cmd = connection.CreateCommand();
+                cmd.CommandText = $"WITH A(name, score) AS (" +
+                                  "SELECT name, MAX(score) as score FROM rating GROUP BY name ORDER BY name ASC)" +
+                                  "SELECT name, score FROM A ORDER BY score DESC";
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        DataTable schemaDataTable = reader.GetSchemaTable();
+                        List<RatingDTO> users = new List<RatingDTO>();
+                        while (reader.Read())
+                        {
+                            users.Add(new RatingDTO(reader.GetString(0), reader.GetInt32(1)));
+                        }
+
+                        return users;
+                    }
+                }
+
+                return null;
+            }
         }
 
         public List<RatingDTO> GetPersonalUsers(string name)
         {
-            var sql = "SELECT name, score FROM rating WHERE name = @name ORDER BY score DESC;";
-
-            var cmd = new NpgsqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("@name", name);
-
-            NpgsqlDataReader reader = cmd.ExecuteReader();
-            DataTable schemaTable = reader.GetSchemaTable();
-
-            List<RatingDTO> users = new List<RatingDTO>();
-            while (reader.Read())
+            using (var connection = new NpgsqlConnection(ConnectionString))
             {
-                RatingDTO user = new RatingDTO((string) reader[0],
-                    (int) reader[1]);
-                users.Add(user);
+                connection.Open();
+                var cmd = connection.CreateCommand();
+                cmd.CommandText = "SELECT score FROM rating WHERE name = @name ORDER BY score DESC";
+                cmd.Parameters.AddWithValue("@name", name);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        DataTable schemaDataTable = reader.GetSchemaTable();
+                        List<RatingDTO> users = new List<RatingDTO>();
+                        while (reader.Read())
+                        {
+                            users.Add(new RatingDTO(name, reader.GetInt32(0)));
+                        }
+
+                        return users;
+                    }
+                }
+
             }
-            reader.Close();
-            return users;
+
+            return null;
         }
     }
 }

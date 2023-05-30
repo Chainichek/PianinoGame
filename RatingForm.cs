@@ -61,8 +61,9 @@ namespace PianinoGame
 
         private void btn_BackToMainMenu_Click(object sender, EventArgs e)
         {
-            Close();
+            Visible = false;
             MainForm.GetInstance().Show();
+
         }
 
         private void MakeGeneraleUnderline()

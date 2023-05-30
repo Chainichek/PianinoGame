@@ -28,8 +28,6 @@ namespace PianinoGame
         //Панели, попавшие в цель
         private List<PictureBox> targetBoxes;
 
-        public string name = "Игрок";
-
         private int Line = 0;
         private static int cellWidth = 0;
         private List<PictureBox> PictureBoxes = new List<PictureBox>();
@@ -249,7 +247,7 @@ namespace PianinoGame
             if (result == DialogResult.OK)
             {
                 var connection = new Connection();
-                var task = Task.Run(() => connection.InsertUserAsync(name, score));
+                var task = Task.Run(() => connection.InsertUserAsync(Properties.Settings.Default.Username, score));
 
                 Visible = false;
                 MainForm.GetInstance().Show();

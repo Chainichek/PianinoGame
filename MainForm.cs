@@ -41,7 +41,15 @@ namespace PianinoGame
         private void StartGame_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AskNameForm.GetInstance().ShowDialog();
+            if (string.IsNullOrEmpty(Properties.Settings.Default.Username))
+            {
+                AskNameForm.GetInstance().Show();
+            }
+            else
+            {
+                GameForm.GetInstance().Show();
+                GameForm.GetInstance().RunGame();
+            }
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)

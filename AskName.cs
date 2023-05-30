@@ -30,7 +30,7 @@ namespace PianinoGame
         private void saveNameButton_Click(object sender, EventArgs e)
         {
             GameForm gameForm = GameForm.GetInstance();
-            gameForm.name = nameTextBox.Text;
+            Properties.Settings.Default.Username = nameTextBox.Text;
             gameForm.Show();
 
             gameForm.RunGame();

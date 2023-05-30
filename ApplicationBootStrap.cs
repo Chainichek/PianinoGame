@@ -14,6 +14,7 @@ namespace PianinoGame
             ChangeFormCulture(MainForm.GetInstance());
             ChangeFormCulture(About.GetInstance());
             ChangeFormCulture(AskNameForm.GetInstance());
+            ChangeFormCulture(RatingForm.GetInstance());
         }
 
         private static void ChangeFormCulture<T>(T form) where T : Form

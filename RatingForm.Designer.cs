@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RatingForm));
             this.label1 = new System.Windows.Forms.Label();
             this.RatingNamePlace = new System.Windows.Forms.Label();
             this.btn_BackToMainMenu = new System.Windows.Forms.Button();
@@ -37,63 +38,41 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(152, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Рейтинг";
             // 
             // RatingNamePlace
             // 
-            this.RatingNamePlace.AutoSize = true;
+            resources.ApplyResources(this.RatingNamePlace, "RatingNamePlace");
             this.RatingNamePlace.BackColor = System.Drawing.Color.Transparent;
-            this.RatingNamePlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RatingNamePlace.Location = new System.Drawing.Point(97, 177);
             this.RatingNamePlace.Name = "RatingNamePlace";
-            this.RatingNamePlace.Size = new System.Drawing.Size(88, 24);
-            this.RatingNamePlace.TabIndex = 1;
-            this.RatingNamePlace.Text = "1. Место";
             this.RatingNamePlace.Click += new System.EventHandler(this.RatingNamePlace_Click);
             // 
             // btn_BackToMainMenu
             // 
-            this.btn_BackToMainMenu.Location = new System.Drawing.Point(174, 509);
+            resources.ApplyResources(this.btn_BackToMainMenu, "btn_BackToMainMenu");
             this.btn_BackToMainMenu.Name = "btn_BackToMainMenu";
-            this.btn_BackToMainMenu.Size = new System.Drawing.Size(75, 23);
-            this.btn_BackToMainMenu.TabIndex = 2;
-            this.btn_BackToMainMenu.Text = "Назад";
             this.btn_BackToMainMenu.UseVisualStyleBackColor = true;
             this.btn_BackToMainMenu.Click += new System.EventHandler(this.btn_BackToMainMenu_Click);
             // 
             // GeneralRatingLabel
             // 
-            this.GeneralRatingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GeneralRatingLabel.Location = new System.Drawing.Point(97, 107);
+            resources.ApplyResources(this.GeneralRatingLabel, "GeneralRatingLabel");
             this.GeneralRatingLabel.Name = "GeneralRatingLabel";
-            this.GeneralRatingLabel.Size = new System.Drawing.Size(100, 25);
-            this.GeneralRatingLabel.TabIndex = 3;
-            this.GeneralRatingLabel.Text = "Общий";
             this.GeneralRatingLabel.Click += new System.EventHandler(this.GeneralRatingLabel_Click);
             // 
             // PersonalRatingLabel
             // 
-            this.PersonalRatingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PersonalRatingLabel.Location = new System.Drawing.Point(232, 107);
+            resources.ApplyResources(this.PersonalRatingLabel, "PersonalRatingLabel");
             this.PersonalRatingLabel.Name = "PersonalRatingLabel";
-            this.PersonalRatingLabel.Size = new System.Drawing.Size(104, 26);
-            this.PersonalRatingLabel.TabIndex = 4;
-            this.PersonalRatingLabel.Text = "Личный";
             this.PersonalRatingLabel.Click += new System.EventHandler(this.PersonalRatingLabel_Click);
             // 
             // RatingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(444, 561);
             this.Controls.Add(this.PersonalRatingLabel);
             this.Controls.Add(this.GeneralRatingLabel);
             this.Controls.Add(this.btn_BackToMainMenu);
@@ -103,8 +82,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RatingForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Rating";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RatingForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

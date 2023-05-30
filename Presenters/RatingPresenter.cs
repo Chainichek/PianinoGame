@@ -35,10 +35,15 @@ namespace PianinoGame.Presenters
         {
             var users = rating.getPersonalRatingUsers(Properties.Settings.Default.Username);
             var text = "";
-            for (var i = 0; i < users.Count & i < 10; i++)
+
+            if (users != null)
             {
-                text += (i+1) + ". " + users[i].name  + " - " + users[i].score + "\n";
+                for (var i = 0; i < users.Count & i < 10; i++)
+                {
+                    text += (i + 1) + ". " + users[i].name + " - " + users[i].score + "\n";
+                }
             }
+
             ratingView.RatingUsers = text;
         }
 

@@ -50,17 +50,19 @@ namespace PianinoGame
             cellWidth = this.Width / 3;
 
             targetY = gamePictureBoxTargerPanel.Location.Y + (gamePictureBoxTargerPanel.Height >> 1);
+            this.KeyUp += new KeyEventHandler(Form1_KeyUp);
+        }
 
+
+        private void SetWorker()
+        {
             worker = new BackgroundWorker();
             worker.WorkerReportsProgress = true;
             worker.DoWork += worker_GameProccess;
             worker.ProgressChanged += worker_ProgressChanged;
             worker.RunWorkerCompleted += worker_RunWorkerCompleted;
             worker.RunWorkerAsync(10000);
-
-            this.KeyUp += new KeyEventHandler(Form1_KeyUp);
         }
-
 
         public static GameForm GetInstance()
         {
@@ -68,7 +70,16 @@ namespace PianinoGame
             {
                 _gameForm = new GameForm();
             }
+
             return _gameForm;
+        }
+
+        public void RunGame()
+        {
+            gameIsStarted = true;
+            gameIsFinished = false;
+            score = 0;
+            SetWorker();
         }
 
         public void upHard()
@@ -172,9 +183,11 @@ namespace PianinoGame
         }
 
         private bool IsTarget(PictureBox picture) => (picture.Location.Y + picture.Height > gamePictureBoxTargerPanel.Location.Y &&
-                                                      picture.Location.Y + picture.Height <
+                                                      picture.Location.Y <
                                                       gamePictureBoxTargerPanel.Location.Y +
                                                       gamePictureBoxTargerPanel.Height);
+
+        private bool IsOutOfScreen(PictureBox picture) => picture.Location.Y > gamePanel.Location.Y + gamePanel.Height;
 
         public void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
@@ -185,7 +198,7 @@ namespace PianinoGame
             {
                 PictureBox picture = PictureBoxes[i];
                 picture.Location = new Point(picture.Location.X, picture.Location.Y + 10);
-                if (picture.Location.Y > this.Height)
+                if (IsOutOfScreen(picture))
                 {
                     gameIsFinished = true;
                 }
@@ -238,10 +251,10 @@ namespace PianinoGame
                 var connection = new Connection();
                 var task = Task.Run(() => connection.InsertUserAsync(name, score));
 
-                this.Dispose();
-                _gameForm = null;
+                Visible = false;
                 MainForm.GetInstance().Show();
 
+                worker.Dispose();
                 await task;
             }
         }
@@ -292,6 +305,15 @@ namespace PianinoGame
             }
         }
 
+        private void Reset()
+        {
+            PictureBoxes.ForEach(closePic);
+            targetBoxes.Clear();
+            PictureBoxes.Clear();
+
+
+        }
+
         private void Pause()
         {
             gameIsStarted = !gameIsStarted;
@@ -320,7 +342,7 @@ namespace PianinoGame
 
         private void BackPicBox_Click(object sender, EventArgs e)
         {
-            Close();
+            Visible = false;
             MainForm.GetInstance().Show();
         }
 

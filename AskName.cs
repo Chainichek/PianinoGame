@@ -32,6 +32,9 @@ namespace PianinoGame
             GameForm gameForm = GameForm.GetInstance();
             gameForm.name = nameTextBox.Text;
             gameForm.Show();
+
+            gameForm.RunGame();
+
             Hide();
         }
 

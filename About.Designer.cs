@@ -67,6 +67,7 @@ namespace PianinoGame
             this.Name = "About";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.Button btn_Back;

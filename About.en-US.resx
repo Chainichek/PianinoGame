@@ -135,6 +135,10 @@ The S key is responsible for pressing the tiles on the 2nd lane. (At the center)
 The D key is responsible for pressing the tiles on the 3rd lane. (most right)
 You need to click or click on the lowest tile.</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>About</value>
   </data>

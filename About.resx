@@ -117,61 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;btn_Back.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>444, 561</value>
   </data>
   <data name="&gt;&gt;aboutTextLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="aboutTextLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>395, 392</value>
-  </data>
-  <data name="&gt;&gt;btn_Back.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="AboutLabel.Text" xml:space="preserve">
-    <value>Об игре</value>
-  </data>
-  <data name="AboutLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 26</value>
-  </data>
-  <data name="&gt;&gt;aboutTextLabel.Name" xml:space="preserve">
-    <value>aboutTextLabel</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="&gt;&gt;btn_Back.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btn_Back.Name" xml:space="preserve">
-    <value>btn_Back</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="AboutLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btn_Back.Text" xml:space="preserve">
-    <value>Назад</value>
-  </data>
-  <data name="&gt;&gt;aboutTextLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>444, 561</value>
-  </data>
-  <data name="aboutTextLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 105</value>
-  </data>
-  <data name="aboutTextLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;AboutLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="AboutLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 43</value>
   </data>
   <data name="aboutTextLabel.Text" xml:space="preserve">
     <value>Цель этой игры - не дать упасть за экран плиткам, падающим сверху.
@@ -184,48 +138,94 @@
 Клавиша D отвечает за нажатие плиток на 3 полосе. (Самая правая)
 Нажимать или кликать нужно на самую нижнюю плитку.</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="aboutTextLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 105</value>
   </data>
-  <data name="btn_Back.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 526</value>
+  <data name="aboutTextLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="&gt;&gt;AboutLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AboutLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Об игре</value>
+  </data>
+  <data name="AboutLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 26</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="aboutTextLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;AboutLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AboutLabel.Name" xml:space="preserve">
-    <value>AboutLabel</value>
+  <data name="AboutLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
   </data>
-  <data name="AboutLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 43</value>
+  <data name="AboutLabel.Text" xml:space="preserve">
+    <value>Об игре</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AboutLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;btn_Back.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_Back.Text" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="btn_Back.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;btn_Back.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AboutLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_Back.Name" xml:space="preserve">
+    <value>btn_Back</value>
+  </data>
+  <data name="&gt;&gt;aboutTextLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btn_Back.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_Back.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AboutLabel.Name" xml:space="preserve">
+    <value>AboutLabel</value>
+  </data>
+  <data name="&gt;&gt;AboutLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;aboutTextLabel.Name" xml:space="preserve">
+    <value>aboutTextLabel</value>
+  </data>
+  <data name="btn_Back.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 526</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_Back.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="aboutTextLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;aboutTextLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="AboutLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 16pt</value>
-  </data>
-  <data name="btn_Back.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;aboutTextLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Об игре</value>
-  </data>
-  <data name="AboutLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="aboutTextLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>395, 392</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

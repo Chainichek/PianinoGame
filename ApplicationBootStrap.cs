@@ -12,6 +12,7 @@ namespace PianinoGame
 
             ChangeFormCulture(Settings.GetInstance());
             ChangeFormCulture(MainForm.GetInstance());
+            ChangeFormCulture(About.GetInstance());
 
         }
 

@@ -148,6 +148,9 @@
     </Compile>
     <Compile Include="Views\IGame.cs" />
     <Compile Include="Views\IRating.cs" />
+    <EmbeddedResource Include="About.en-US.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>

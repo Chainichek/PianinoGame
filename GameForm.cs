@@ -393,5 +393,10 @@ namespace PianinoGame
             this.Hide();
             Settings.GetInstance().ShowDialog();
         }
+
+        private void pause_PictureBox_Click(object sender, EventArgs e)
+        {
+            Pause();
+        }
     }
 }

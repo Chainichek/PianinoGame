@@ -172,6 +172,26 @@ namespace PianinoGame.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_pause_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_pause_30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_pause_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_pause_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_1185747322_612x612 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-1185747322-612x612", resourceCulture);

@@ -31,6 +31,7 @@
             this.ScoreLabel = new System.Windows.Forms.Label();
             this.BackPicBox = new System.Windows.Forms.PictureBox();
             this.gamePanel = new System.Windows.Forms.Panel();
+            this.pause_PictureBox = new System.Windows.Forms.PictureBox();
             this.gamePictureBoxTargerPanel = new System.Windows.Forms.Panel();
             this.pausePanel = new System.Windows.Forms.Panel();
             this.pauseGroupBox = new System.Windows.Forms.GroupBox();
@@ -42,6 +43,7 @@
             this.pauseLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BackPicBox)).BeginInit();
             this.gamePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pause_PictureBox)).BeginInit();
             this.pausePanel.SuspendLayout();
             this.pauseGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +75,7 @@
             // 
             this.gamePanel.BackColor = System.Drawing.Color.Transparent;
             this.gamePanel.BackgroundImage = global::PianinoGame.Properties.Resources.png_transparent_light_blue_abstract_gradient_background_blurred;
+            this.gamePanel.Controls.Add(this.pause_PictureBox);
             this.gamePanel.Controls.Add(this.BackPicBox);
             this.gamePanel.Controls.Add(this.ScoreLabel);
             this.gamePanel.Controls.Add(this.gamePictureBoxTargerPanel);
@@ -82,6 +85,18 @@
             this.gamePanel.Size = new System.Drawing.Size(444, 561);
             this.gamePanel.TabIndex = 5;
             this.gamePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.gamePanel_Paint);
+            // 
+            // pause_PictureBox
+            // 
+            this.pause_PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.pause_PictureBox.Image = global::PianinoGame.Properties.Resources.icons8_pause_50;
+            this.pause_PictureBox.Location = new System.Drawing.Point(382, 12);
+            this.pause_PictureBox.Name = "pause_PictureBox";
+            this.pause_PictureBox.Size = new System.Drawing.Size(50, 53);
+            this.pause_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pause_PictureBox.TabIndex = 6;
+            this.pause_PictureBox.TabStop = false;
+            this.pause_PictureBox.Click += new System.EventHandler(this.pause_PictureBox_Click);
             // 
             // gamePictureBoxTargerPanel
             // 
@@ -195,6 +210,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BackPicBox)).EndInit();
             this.gamePanel.ResumeLayout(false);
             this.gamePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pause_PictureBox)).EndInit();
             this.pausePanel.ResumeLayout(false);
             this.pausePanel.PerformLayout();
             this.pauseGroupBox.ResumeLayout(false);
@@ -217,5 +233,6 @@
         private System.Windows.Forms.Button pauseContinueButton;
         private System.Windows.Forms.Panel gamePictureBoxTargerPanel;
         private System.Windows.Forms.Button pauseSettingsButton;
+        private System.Windows.Forms.PictureBox pause_PictureBox;
     }
 }

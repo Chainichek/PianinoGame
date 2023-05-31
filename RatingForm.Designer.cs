@@ -85,6 +85,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RatingForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.ControlBox = false;
         }
 
         private System.Windows.Forms.Label GeneralRatingLabel;

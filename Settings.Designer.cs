@@ -178,6 +178,7 @@ namespace PianinoGame
             ((System.ComponentModel.ISupportInitialize)(this.effectslVolumeSettingsTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generalVolumeSettingsTrackBar)).EndInit();
             this.ResumeLayout(false);
+            this.ControlBox = false;
 
         }
 

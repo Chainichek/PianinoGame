@@ -67,6 +67,7 @@ namespace PianinoGame
             this.Name = "About";
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.ControlBox = false;
 
         }
 

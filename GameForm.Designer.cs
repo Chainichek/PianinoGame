@@ -215,7 +215,7 @@
             this.pausePanel.PerformLayout();
             this.pauseGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
-
+            this.ControlBox = false;
         }
 
         private System.Windows.Forms.Button pauseAboutButton;

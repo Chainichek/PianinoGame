@@ -74,5 +74,10 @@ namespace PianinoGame
             this.Hide();
             Settings.GetInstance().ShowDialog();
         }
+
+        private void titleLabel_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

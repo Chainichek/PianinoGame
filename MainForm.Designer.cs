@@ -23,8 +23,8 @@
         #region Код, автоматически созданный конструктором форм Windows
 
         /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -42,6 +42,7 @@
             resources.ApplyResources(this.titleLabel, "titleLabel");
             this.titleLabel.BackColor = System.Drawing.Color.Transparent;
             this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Click += new System.EventHandler(this.titleLabel_Click);
             // 
             // startGameLabel
             // 
@@ -82,7 +83,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PianinoGame.Properties.Resources.png_transparent_light_blue_abstract_gradient_background_blurred;
+            this.ControlBox = false;
             this.Controls.Add(this.settingsLabel);
             this.Controls.Add(this.aboutLabel);
             this.Controls.Add(this.exitLabel);
@@ -96,7 +97,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.ControlBox = false;
         }
 
         #endregion

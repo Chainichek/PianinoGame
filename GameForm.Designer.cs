@@ -62,7 +62,6 @@
             // BackPicBox
             // 
             this.BackPicBox.BackColor = System.Drawing.Color.Transparent;
-            this.BackPicBox.Image = global::PianinoGame.Properties.Resources.icons8_back_96;
             this.BackPicBox.Location = new System.Drawing.Point(12, 12);
             this.BackPicBox.Name = "BackPicBox";
             this.BackPicBox.Size = new System.Drawing.Size(50, 53);
@@ -74,7 +73,6 @@
             // gamePanel
             // 
             this.gamePanel.BackColor = System.Drawing.Color.Transparent;
-            this.gamePanel.BackgroundImage = global::PianinoGame.Properties.Resources.png_transparent_light_blue_abstract_gradient_background_blurred;
             this.gamePanel.Controls.Add(this.pause_PictureBox);
             this.gamePanel.Controls.Add(this.BackPicBox);
             this.gamePanel.Controls.Add(this.ScoreLabel);
@@ -196,6 +194,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 561);
+            this.ControlBox = false;
             this.Controls.Add(this.gamePanel);
             this.Controls.Add(this.pausePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -215,7 +214,6 @@
             this.pausePanel.PerformLayout();
             this.pauseGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.ControlBox = false;
         }
 
         private System.Windows.Forms.Button pauseAboutButton;

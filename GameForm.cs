@@ -361,7 +361,18 @@ namespace PianinoGame
 
         private void pauseApplicationExitButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show(
+                "Выйти из игры?",
+                "Выход из игры",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.DefaultDesktopOnly);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void pauseAboutButton_Click(object sender, EventArgs e)

@@ -251,8 +251,8 @@ namespace PianinoGame
             if (result == DialogResult.OK)
             {
                 var connection = new Connection();
-                var task = Task.Run(() => connection.InsertUserAsync(Properties.Settings.Default.Username, score));
-
+                var task = Task.Run(() => connection.saveGameResult(Properties.Settings.Default.UserId, score));
+                
                 Visible = false;
                 MainForm.GetInstance().Show();
 

@@ -26,21 +26,21 @@ namespace PianinoGame.Presenters
             var text = "";
             for (var i = 0; i < users.Count & i < 10; i++)
             {
-                text += (i+1) + ". " + users[i].name  + " - " + users[i].score + "\n";
+                text += (i+1) + ". " + users[i].user.name  + " - " + users[i].score + "\n";
             }
             ratingView.RatingUsers = text;
         }
         
         public void ShowPersonalRatingTable()
         {
-            var users = rating.getPersonalRatingUsers(Properties.Settings.Default.Username);
+            var users = rating.getPersonalRatingUsers(Properties.Settings.Default.UserId);
             var text = "";
 
             if (users != null)
             {
                 for (var i = 0; i < users.Count & i < 10; i++)
                 {
-                    text += (i + 1) + ". " + users[i].name + " - " + users[i].score + "\n";
+                    text += (i + 1) + ". " + users[i].user.name + " - " + users[i].score + "\n";
                 }
             }
 

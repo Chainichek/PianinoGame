@@ -17,9 +17,9 @@ namespace PianinoGame.Models
             return connection.GetUsers();
         }
         
-        public List<RatingDTO> getPersonalRatingUsers(string name)
+        public List<RatingDTO> getPersonalRatingUsers(int userId)
         {
-            return connection.GetPersonalUsers(name);
+            return connection.GetPersonalUsers(userId);
         }
     }
 }

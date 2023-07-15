@@ -1,7 +1,13 @@
-﻿using Npgsql;
+﻿using System;
+using Npgsql;
 using PianinoGame.Models;
 using System.Collections.Generic;
 using System.Data;
+using System.Net;
+using System.Net.Http;
+using System.Text;
+using System.Text.Json;
+using PianinoGame.Models.dto;
 
 namespace PianinoGame.Database
 {
@@ -16,89 +22,59 @@ namespace PianinoGame.Database
         {
         }
 
-        public void InsertUser(string name, int score)
+        public void saveGameResult(int userId, int score)
         {
-            using (var connection = new NpgsqlConnection(ConnectionString))
-            {
-                connection.Open();
-                var cmd = connection.CreateCommand();
-                cmd.CommandText = "INSERT INTO rating (name, score) VALUES(@name, @score)";
-                cmd.Parameters.AddWithValue("@name", name);
-                cmd.Parameters.AddWithValue("@score", score);
+            HttpClient client = new HttpClient();
+            StringBuilder postData = new StringBuilder();
+            postData.Append("{\"user_id\": \"");
+            postData.Append(userId);
+            postData.Append("\", \"score\": ");
+            postData.Append(score);
+            postData.Append("}");
+            
+            StringContent myStringContent = new StringContent(postData.ToString(), Encoding.UTF8, "application/json");
+            var responce = client.PostAsync("http://194.187.122.28:8080/games", myStringContent);
+           
+        }
 
-                cmd.ExecuteNonQuery();
+        public UserDto InsertUser(string name)
+        {
+            HttpClient client = new HttpClient();
+            StringBuilder postData = new StringBuilder();
+            postData.Append("{\"name\": \"");
+            postData.Append(name);
+            postData.Append("\"}");
+            
+            StringContent myStringContent = new StringContent(postData.ToString(), Encoding.UTF8, "application/json");
+            var responce = client.PostAsync("http://194.187.122.28:8080/users", myStringContent);
+            if (responce.Result.StatusCode == HttpStatusCode.OK)
+            {
+                return new UserDto(3, "asdasdas");
+                var ratings = JsonSerializer.Deserialize<UserDto>(responce.Result.ToString());
+                return ratings;
             }
+
+            return null;
         }
 
         public async void InsertUserAsync(string name, int score)
         {
-            using (var connection = new NpgsqlConnection(ConnectionString))
-            {
-                connection.Open();
-                var cmd = connection.CreateCommand();
-                cmd.CommandText = $"INSERT INTO rating (name, score) VALUES(@name, @score)";
-                cmd.Parameters.AddWithValue("@name", name);
-                cmd.Parameters.AddWithValue("@score", score);
-
-                await cmd.ExecuteNonQueryAsync();
-            }
         }
-        // TODO ну типа вынести execute в отедельный метод все дела
+        
         public List<RatingDTO> GetUsers()
         {
-            using (var connection = new NpgsqlConnection(ConnectionString))
-            {
-                connection.Open();
-                var cmd = connection.CreateCommand();
-                cmd.CommandText = $"WITH A(name, score) AS (" +
-                                  "SELECT name, MAX(score) as score FROM rating GROUP BY name ORDER BY name ASC)" +
-                                  "SELECT name, score FROM A ORDER BY score DESC";
-                using (var reader = cmd.ExecuteReader())
-                {
-                    if (reader.HasRows)
-                    {
-                        DataTable schemaDataTable = reader.GetSchemaTable();
-                        List<RatingDTO> users = new List<RatingDTO>();
-                        while (reader.Read())
-                        {
-                            users.Add(new RatingDTO(reader.GetString(0), reader.GetInt32(1)));
-                        }
-
-                        return users;
-                    }
-                }
-
-                return null;
-            }
+            HttpClient client = new HttpClient();
+            var responce = client.GetStringAsync("http://194.187.122.28:8080/ratings").Result;
+            var ratings = JsonSerializer.Deserialize<List<RatingDTO>>(responce.ToString());
+            return ratings;
         }
 
-        public List<RatingDTO> GetPersonalUsers(string name)
+        public List<RatingDTO> GetPersonalUsers(int userId)
         {
-            using (var connection = new NpgsqlConnection(ConnectionString))
-            {
-                connection.Open();
-                var cmd = connection.CreateCommand();
-                cmd.CommandText = "SELECT score FROM rating WHERE name = @name ORDER BY score DESC";
-                cmd.Parameters.AddWithValue("@name", name);
-
-                using (var reader = cmd.ExecuteReader())
-                {
-                    if (reader.HasRows)
-                    {
-                        DataTable schemaDataTable = reader.GetSchemaTable();
-                        List<RatingDTO> users = new List<RatingDTO>();
-                        while (reader.Read())
-                        {
-                            users.Add(new RatingDTO(name, reader.GetInt32(0)));
-                        }
-
-                        return users;
-                    }
-                }
-
-            }
-
-            return null;
+            HttpClient client = new HttpClient();
+            var responce = client.GetStringAsync("http://194.187.122.28:8080/ratings/" + userId).Result;
+            var ratings = JsonSerializer.Deserialize<List<RatingDTO>>(responce.ToString());
+            return ratings;
         }
     }
 }

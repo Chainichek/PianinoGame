@@ -39,10 +39,6 @@ namespace PianinoGame
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.volumeSettingsGroupBox = new System.Windows.Forms.GroupBox();
-            this.musiclVolumeSettingsTrackBar = new System.Windows.Forms.TrackBar();
-            this.musiclVolumeSettingsLabel = new System.Windows.Forms.Label();
-            this.effectslVolumeSettingsTrackBar = new System.Windows.Forms.TrackBar();
-            this.effectslVolumeSettingsLabel = new System.Windows.Forms.Label();
             this.generalVolumeSettingsTrackBar = new System.Windows.Forms.TrackBar();
             this.generalVolumeSettingsLabel = new System.Windows.Forms.Label();
             this.settingsLabel = new System.Windows.Forms.Label();
@@ -51,8 +47,6 @@ namespace PianinoGame
             this.settingsGroupBox.SuspendLayout();
             this.gameplaySettingsGroupBox.SuspendLayout();
             this.volumeSettingsGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.musiclVolumeSettingsTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.effectslVolumeSettingsTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generalVolumeSettingsTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,37 +91,11 @@ namespace PianinoGame
             // 
             // volumeSettingsGroupBox
             // 
-            this.volumeSettingsGroupBox.Controls.Add(this.musiclVolumeSettingsTrackBar);
-            this.volumeSettingsGroupBox.Controls.Add(this.musiclVolumeSettingsLabel);
-            this.volumeSettingsGroupBox.Controls.Add(this.effectslVolumeSettingsTrackBar);
-            this.volumeSettingsGroupBox.Controls.Add(this.effectslVolumeSettingsLabel);
             this.volumeSettingsGroupBox.Controls.Add(this.generalVolumeSettingsTrackBar);
             this.volumeSettingsGroupBox.Controls.Add(this.generalVolumeSettingsLabel);
             resources.ApplyResources(this.volumeSettingsGroupBox, "volumeSettingsGroupBox");
             this.volumeSettingsGroupBox.Name = "volumeSettingsGroupBox";
             this.volumeSettingsGroupBox.TabStop = false;
-            // 
-            // musiclVolumeSettingsTrackBar
-            // 
-            resources.ApplyResources(this.musiclVolumeSettingsTrackBar, "musiclVolumeSettingsTrackBar");
-            this.musiclVolumeSettingsTrackBar.Maximum = 100;
-            this.musiclVolumeSettingsTrackBar.Name = "musiclVolumeSettingsTrackBar";
-            // 
-            // musiclVolumeSettingsLabel
-            // 
-            resources.ApplyResources(this.musiclVolumeSettingsLabel, "musiclVolumeSettingsLabel");
-            this.musiclVolumeSettingsLabel.Name = "musiclVolumeSettingsLabel";
-            // 
-            // effectslVolumeSettingsTrackBar
-            // 
-            resources.ApplyResources(this.effectslVolumeSettingsTrackBar, "effectslVolumeSettingsTrackBar");
-            this.effectslVolumeSettingsTrackBar.Maximum = 100;
-            this.effectslVolumeSettingsTrackBar.Name = "effectslVolumeSettingsTrackBar";
-            // 
-            // effectslVolumeSettingsLabel
-            // 
-            resources.ApplyResources(this.effectslVolumeSettingsLabel, "effectslVolumeSettingsLabel");
-            this.effectslVolumeSettingsLabel.Name = "effectslVolumeSettingsLabel";
             // 
             // generalVolumeSettingsTrackBar
             // 
@@ -163,6 +131,7 @@ namespace PianinoGame
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ControlBox = false;
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.settingsLabel);
@@ -174,12 +143,8 @@ namespace PianinoGame
             this.gameplaySettingsGroupBox.PerformLayout();
             this.volumeSettingsGroupBox.ResumeLayout(false);
             this.volumeSettingsGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.musiclVolumeSettingsTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.effectslVolumeSettingsTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generalVolumeSettingsTrackBar)).EndInit();
             this.ResumeLayout(false);
-            this.ControlBox = false;
-
         }
 
         private System.Windows.Forms.GroupBox gameplaySettingsGroupBox;
@@ -194,10 +159,6 @@ namespace PianinoGame
         #endregion
 
         private System.Windows.Forms.GroupBox volumeSettingsGroupBox;
-        private System.Windows.Forms.TrackBar musiclVolumeSettingsTrackBar;
-        private System.Windows.Forms.Label musiclVolumeSettingsLabel;
-        private System.Windows.Forms.TrackBar effectslVolumeSettingsTrackBar;
-        private System.Windows.Forms.Label effectslVolumeSettingsLabel;
         private System.Windows.Forms.TrackBar generalVolumeSettingsTrackBar;
         private System.Windows.Forms.Label generalVolumeSettingsLabel;
         private System.Windows.Forms.Button saveButton;

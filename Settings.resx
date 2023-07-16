@@ -117,131 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;gameplaySettingsGroupBox.Name" xml:space="preserve">
-    <value>gameplaySettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;gameplaySettingsGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gameplaySettingsGroupBox.Parent" xml:space="preserve">
-    <value>settingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;gameplaySettingsGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;volumeSettingsGroupBox.Name" xml:space="preserve">
-    <value>volumeSettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;volumeSettingsGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;volumeSettingsGroupBox.Parent" xml:space="preserve">
-    <value>settingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;volumeSettingsGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="settingsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 70</value>
-  </data>
-  <data name="settingsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 357</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="settingsGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;settingsGroupBox.Name" xml:space="preserve">
-    <value>settingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;settingsGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;settingsGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;settingsGroupBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;cultureLabel.Name" xml:space="preserve">
-    <value>cultureLabel</value>
-  </data>
-  <data name="&gt;&gt;cultureLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cultureLabel.Parent" xml:space="preserve">
-    <value>gameplaySettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;cultureLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cultureComboBox.Name" xml:space="preserve">
-    <value>cultureComboBox</value>
-  </data>
-  <data name="&gt;&gt;cultureComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cultureComboBox.Parent" xml:space="preserve">
-    <value>gameplaySettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;cultureComboBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;usernameTextBox.Name" xml:space="preserve">
-    <value>usernameTextBox</value>
-  </data>
-  <data name="&gt;&gt;usernameTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;usernameTextBox.Parent" xml:space="preserve">
-    <value>gameplaySettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;usernameTextBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;usernameLabel.Name" xml:space="preserve">
-    <value>usernameLabel</value>
-  </data>
-  <data name="&gt;&gt;usernameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;usernameLabel.Parent" xml:space="preserve">
-    <value>gameplaySettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;usernameLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="gameplaySettingsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 22</value>
-  </data>
-  <data name="gameplaySettingsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 125</value>
-  </data>
-  <data name="gameplaySettingsGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="gameplaySettingsGroupBox.Text" xml:space="preserve">
-    <value>Настройки игры</value>
-  </data>
-  <data name="&gt;&gt;gameplaySettingsGroupBox.Name" xml:space="preserve">
-    <value>gameplaySettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;gameplaySettingsGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gameplaySettingsGroupBox.Parent" xml:space="preserve">
-    <value>settingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;gameplaySettingsGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="cultureLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 66</value>
   </data>
   <data name="cultureLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 16</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cultureLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
@@ -326,191 +209,29 @@
   <data name="&gt;&gt;usernameLabel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;musiclVolumeSettingsTrackBar.Name" xml:space="preserve">
-    <value>musiclVolumeSettingsTrackBar</value>
+  <data name="gameplaySettingsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 22</value>
   </data>
-  <data name="&gt;&gt;musiclVolumeSettingsTrackBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="gameplaySettingsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 125</value>
   </data>
-  <data name="&gt;&gt;musiclVolumeSettingsTrackBar.Parent" xml:space="preserve">
-    <value>volumeSettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;musiclVolumeSettingsTrackBar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;musiclVolumeSettingsLabel.Name" xml:space="preserve">
-    <value>musiclVolumeSettingsLabel</value>
-  </data>
-  <data name="&gt;&gt;musiclVolumeSettingsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;musiclVolumeSettingsLabel.Parent" xml:space="preserve">
-    <value>volumeSettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;musiclVolumeSettingsLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsTrackBar.Name" xml:space="preserve">
-    <value>effectslVolumeSettingsTrackBar</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsTrackBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsTrackBar.Parent" xml:space="preserve">
-    <value>volumeSettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsTrackBar.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsLabel.Name" xml:space="preserve">
-    <value>effectslVolumeSettingsLabel</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsLabel.Parent" xml:space="preserve">
-    <value>volumeSettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;generalVolumeSettingsTrackBar.Name" xml:space="preserve">
-    <value>generalVolumeSettingsTrackBar</value>
-  </data>
-  <data name="&gt;&gt;generalVolumeSettingsTrackBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;generalVolumeSettingsTrackBar.Parent" xml:space="preserve">
-    <value>volumeSettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;generalVolumeSettingsTrackBar.ZOrder" xml:space="preserve">
+  <data name="gameplaySettingsGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;generalVolumeSettingsLabel.Name" xml:space="preserve">
-    <value>generalVolumeSettingsLabel</value>
+  <data name="gameplaySettingsGroupBox.Text" xml:space="preserve">
+    <value>Настройки игры</value>
   </data>
-  <data name="&gt;&gt;generalVolumeSettingsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;gameplaySettingsGroupBox.Name" xml:space="preserve">
+    <value>gameplaySettingsGroupBox</value>
   </data>
-  <data name="&gt;&gt;generalVolumeSettingsLabel.Parent" xml:space="preserve">
-    <value>volumeSettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;generalVolumeSettingsLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="volumeSettingsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 156</value>
-  </data>
-  <data name="volumeSettingsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>275, 195</value>
-  </data>
-  <data name="volumeSettingsGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="volumeSettingsGroupBox.Text" xml:space="preserve">
-    <value>Настройки громкости</value>
-  </data>
-  <data name="&gt;&gt;volumeSettingsGroupBox.Name" xml:space="preserve">
-    <value>volumeSettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;volumeSettingsGroupBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;gameplaySettingsGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;volumeSettingsGroupBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;gameplaySettingsGroupBox.Parent" xml:space="preserve">
     <value>settingsGroupBox</value>
   </data>
-  <data name="&gt;&gt;volumeSettingsGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="musiclVolumeSettingsTrackBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 142</value>
-  </data>
-  <data name="musiclVolumeSettingsTrackBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 45</value>
-  </data>
-  <data name="musiclVolumeSettingsTrackBar.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;musiclVolumeSettingsTrackBar.Name" xml:space="preserve">
-    <value>musiclVolumeSettingsTrackBar</value>
-  </data>
-  <data name="&gt;&gt;musiclVolumeSettingsTrackBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;musiclVolumeSettingsTrackBar.Parent" xml:space="preserve">
-    <value>volumeSettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;musiclVolumeSettingsTrackBar.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;gameplaySettingsGroupBox.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="musiclVolumeSettingsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 142</value>
-  </data>
-  <data name="musiclVolumeSettingsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 29</value>
-  </data>
-  <data name="musiclVolumeSettingsLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="musiclVolumeSettingsLabel.Text" xml:space="preserve">
-    <value>Громкость музыки</value>
-  </data>
-  <data name="&gt;&gt;musiclVolumeSettingsLabel.Name" xml:space="preserve">
-    <value>musiclVolumeSettingsLabel</value>
-  </data>
-  <data name="&gt;&gt;musiclVolumeSettingsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;musiclVolumeSettingsLabel.Parent" xml:space="preserve">
-    <value>volumeSettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;musiclVolumeSettingsLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="effectslVolumeSettingsTrackBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 91</value>
-  </data>
-  <data name="effectslVolumeSettingsTrackBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 45</value>
-  </data>
-  <data name="effectslVolumeSettingsTrackBar.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsTrackBar.Name" xml:space="preserve">
-    <value>effectslVolumeSettingsTrackBar</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsTrackBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsTrackBar.Parent" xml:space="preserve">
-    <value>volumeSettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsTrackBar.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="effectslVolumeSettingsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 91</value>
-  </data>
-  <data name="effectslVolumeSettingsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 28</value>
-  </data>
-  <data name="effectslVolumeSettingsLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="effectslVolumeSettingsLabel.Text" xml:space="preserve">
-    <value>Громкость звуков</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsLabel.Name" xml:space="preserve">
-    <value>effectslVolumeSettingsLabel</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsLabel.Parent" xml:space="preserve">
-    <value>volumeSettingsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;effectslVolumeSettingsLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="generalVolumeSettingsTrackBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 40</value>
@@ -531,7 +252,7 @@
     <value>volumeSettingsGroupBox</value>
   </data>
   <data name="&gt;&gt;generalVolumeSettingsTrackBar.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>0</value>
   </data>
   <data name="generalVolumeSettingsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 40</value>
@@ -555,7 +276,52 @@
     <value>volumeSettingsGroupBox</value>
   </data>
   <data name="&gt;&gt;generalVolumeSettingsLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>1</value>
+  </data>
+  <data name="volumeSettingsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 156</value>
+  </data>
+  <data name="volumeSettingsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 93</value>
+  </data>
+  <data name="volumeSettingsGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="volumeSettingsGroupBox.Text" xml:space="preserve">
+    <value>Настройки громкости</value>
+  </data>
+  <data name="&gt;&gt;volumeSettingsGroupBox.Name" xml:space="preserve">
+    <value>volumeSettingsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;volumeSettingsGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;volumeSettingsGroupBox.Parent" xml:space="preserve">
+    <value>settingsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;volumeSettingsGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="settingsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 70</value>
+  </data>
+  <data name="settingsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 261</value>
+  </data>
+  <data name="settingsGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;settingsGroupBox.Name" xml:space="preserve">
+    <value>settingsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;settingsGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;settingsGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;settingsGroupBox.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="settingsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>113, 27</value>

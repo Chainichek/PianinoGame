@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.ScoreLabel = new System.Windows.Forms.Label();
-            this.BackPicBox = new System.Windows.Forms.PictureBox();
             this.gamePanel = new System.Windows.Forms.Panel();
             this.pause_PictureBox = new System.Windows.Forms.PictureBox();
             this.gamePictureBoxTargerPanel = new System.Windows.Forms.Panel();
@@ -41,7 +40,6 @@
             this.pauseAboutButton = new System.Windows.Forms.Button();
             this.pauseContinueButton = new System.Windows.Forms.Button();
             this.pauseLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.BackPicBox)).BeginInit();
             this.gamePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pause_PictureBox)).BeginInit();
             this.pausePanel.SuspendLayout();
@@ -59,22 +57,10 @@
             this.ScoreLabel.TabIndex = 2;
             this.ScoreLabel.Text = "Счет: 0";
             // 
-            // BackPicBox
-            // 
-            this.BackPicBox.BackColor = System.Drawing.Color.Transparent;
-            this.BackPicBox.Location = new System.Drawing.Point(12, 12);
-            this.BackPicBox.Name = "BackPicBox";
-            this.BackPicBox.Size = new System.Drawing.Size(50, 53);
-            this.BackPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BackPicBox.TabIndex = 4;
-            this.BackPicBox.TabStop = false;
-            this.BackPicBox.Click += new System.EventHandler(this.BackPicBox_Click);
-            // 
             // gamePanel
             // 
             this.gamePanel.BackColor = System.Drawing.Color.Transparent;
             this.gamePanel.Controls.Add(this.pause_PictureBox);
-            this.gamePanel.Controls.Add(this.BackPicBox);
             this.gamePanel.Controls.Add(this.ScoreLabel);
             this.gamePanel.Controls.Add(this.gamePictureBoxTargerPanel);
             this.gamePanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -158,6 +144,7 @@
             this.pauseGameExitButton.TabIndex = 3;
             this.pauseGameExitButton.Text = "Выйти в  главное меню";
             this.pauseGameExitButton.UseVisualStyleBackColor = true;
+            this.pauseGameExitButton.Click += new System.EventHandler(this.pauseGameExitButton_Click_1);
             // 
             // pauseAboutButton
             // 
@@ -206,7 +193,6 @@
             this.Text = "PlayForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameForm_FormClosed);
             this.Load += new System.EventHandler(this.GameForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.BackPicBox)).EndInit();
             this.gamePanel.ResumeLayout(false);
             this.gamePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pause_PictureBox)).EndInit();
@@ -224,7 +210,6 @@
         #endregion
 
         private System.Windows.Forms.Label ScoreLabel;
-        private System.Windows.Forms.PictureBox BackPicBox;
         private System.Windows.Forms.Panel gamePanel;
         private System.Windows.Forms.Panel pausePanel;
         private System.Windows.Forms.Label pauseLabel;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using PianinoGame.Database;
+using PianinoGame.Models;
 using PianinoGame.Properties;
 
 namespace PianinoGame
@@ -45,8 +46,16 @@ namespace PianinoGame
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            saveName(usernameTextBox.Text);
-            Properties.Settings.Default.Username = usernameTextBox.Text;
+            
+            if (!Properties.Settings.Default.Username.Equals(usernameTextBox.Text))
+            {
+                UserDto result = saveName(usernameTextBox.Text);
+                if (result != null)
+                {
+                    Properties.Settings.Default.Username = usernameTextBox.Text;
+                    Properties.Settings.Default.UserId = result.id;
+                }
+            }
             Properties.Settings.Default.Culture = cultureComboBox.Text;
             Properties.Settings.Default.GeneralVolume = (ushort)generalVolumeSettingsTrackBar.Value;
             Properties.Settings.Default.EffectsVolume = (ushort)effectslVolumeSettingsTrackBar.Value;
@@ -57,7 +66,7 @@ namespace PianinoGame
             ApplicationBootStrap.ChangeCulture();
         }
 
-        private void saveName(string name)
+        private UserDto saveName(string name)
         {
             var result = Connection.InsertUser(name);
             if (result == null)
@@ -69,7 +78,10 @@ namespace PianinoGame
                     MessageBoxIcon.Information,
                     MessageBoxDefaultButton.Button1,
                     MessageBoxOptions.ServiceNotification);
+                return null;
             }
+
+            return result;
         }
         
         private void Settings_FormClosed(object sender, FormClosedEventArgs e)

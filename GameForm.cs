@@ -4,12 +4,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 using PianinoGame.Models;
+using Color = System.Drawing.Color;
 using Timer = System.Threading.Timer;
 
 namespace PianinoGame
@@ -39,6 +43,8 @@ namespace PianinoGame
         private bool line3IsFree = true;
 
         private int timeSleep = 50;
+
+        private MediaPlayer my_sound;
 
 
         private GameForm()
@@ -82,6 +88,14 @@ namespace PianinoGame
             gameIsFinished = false;
             score = 0;
             SetWorker();
+            my_sound = new MediaPlayer();
+            my_sound.Open(new Uri("C:\\Users\\ildar\\source\\repos\\Chainichek\\PianinoGame\\Resources\\23.wav"));
+            my_sound.Play();
+        }
+        public void SetVolume(int volume)
+        {
+            // MediaPlayer volume is a float value between 0 and 1.
+            my_sound.Volume = volume / 100.0f;
         }
 
         public void upHard()
@@ -240,6 +254,7 @@ namespace PianinoGame
         }
         async void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            my_sound.Stop();
             DialogResult result = MessageBox.Show(
                 "Игра завершена.\n" +
                 "Ваш счет: " + score.ToString(),
@@ -326,11 +341,14 @@ namespace PianinoGame
 
             if (!gameIsStarted)
             {
+                my_sound.Pause();
                 gamePanel.Visible = false;
                 pausePanel.Visible = true;
             }
             else
             {
+                my_sound.Play();
+                SetVolume(Properties.Settings.Default.GeneralVolume);
                 gamePanel.Visible = true;
                 pausePanel.Visible = false;
             }
@@ -361,6 +379,7 @@ namespace PianinoGame
 
         private void pauseApplicationExitButton_Click(object sender, EventArgs e)
         {
+            my_sound.Stop();
             DialogResult result = MessageBox.Show(
                 "Выйти из игры?",
                 "Выход из игры",
@@ -408,6 +427,29 @@ namespace PianinoGame
         private void pause_PictureBox_Click(object sender, EventArgs e)
         {
             Pause();
+        }
+
+        private void pauseGameExitButton_Click_1(object sender, EventArgs e)
+        {
+            my_sound.Stop();
+            DialogResult result = MessageBox.Show(
+                "Игра завершена.\n" +
+                "Ваш счет: " + score.ToString(),
+                "Игра окончена",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.DefaultDesktopOnly);
+            if (result == DialogResult.OK)
+            {
+                var connection = new Connection();
+                connection.saveGameResult(Properties.Settings.Default.UserId, score);
+                
+                Visible = false;
+                MainForm.GetInstance().Show();
+
+                Reset();
+            }
         }
     }
 }

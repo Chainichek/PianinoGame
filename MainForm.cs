@@ -51,6 +51,7 @@ namespace PianinoGame
             }
         }
 
+        /*
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             DialogResult result = MessageBox.Show(
@@ -66,6 +67,7 @@ namespace PianinoGame
                 Application.Exit();
             }
         }
+        */
 
         private void ExitLabel_Click(object sender, EventArgs e)
         {

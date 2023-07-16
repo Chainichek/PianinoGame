@@ -46,11 +46,10 @@ namespace PianinoGame.Database
             postData.Append("\"}");
             
             StringContent myStringContent = new StringContent(postData.ToString(), Encoding.UTF8, "application/json");
-            var responce = client.PostAsync("http://194.187.122.28:8080/users", myStringContent);
-            if (responce.Result.StatusCode == HttpStatusCode.OK)
+            var responce = client.PostAsync("http://194.187.122.28:8080/users", myStringContent).Result;
+            if (responce.StatusCode == HttpStatusCode.OK)
             {
-                return new UserDto(3, "asdasdas");
-                var ratings = JsonSerializer.Deserialize<UserDto>(responce.Result.ToString());
+                var ratings = JsonSerializer.Deserialize<UserDto>(responce.Content.ReadAsStringAsync().Result);
                 return ratings;
             }
 
